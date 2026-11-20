@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    "M000028"
+  ],
+  "ended_utc": "2026-11-20T17:28:26.291209+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.CloudProd:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "ad6140f6e1aaf575f073e084b1840fa0cd75a2980eee8fdaac3a1b53c0ae3898",
+  "objects": {
+    "M000028": "70b68ee8221fcda0c734b2393c0a2370d1d7ec86622c868beff0eb00add38e0b"
+  },
+  "bundle_sha256": "582d21e6c42da86a58bceef43119703f45dd6c42a38165914cc4a918233de742"
+}
