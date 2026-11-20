@@ -1,0 +1,36 @@
+# Tool pins for kernel/independent-check.sh
+#
+# Every external tool the pilot uses is pinned to an exact source commit
+# below. The SHA-256 values are the hashes of the binaries produced by the
+# reference build recorded in kernel/README.md; they are recorded so a
+# rebuilder can compare, but a from-source rebuild is not guaranteed to be
+# bit-for-bit reproducible — the commit pins are the normative part.
+
+## Lean toolchain (supplied by the prepared replay volume, not downloaded)
+lean        = 4.33.1
+lean_commit = 819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+mathlib     = 0df444a360eaa60ab8c11dca51a86af692955474
+# These are the replay's own pins (verify.sh / tracker/summary.json). The
+# volume's elan toolchain leanprover/lean4:v4.33.1 supplies `lean` for the
+# Pilot.lean compile and the toolchain against which lean4export is built.
+
+## lean4export (exporter: Lean environment -> NDJSON)
+repo    = https://github.com/leanprover/lean4export.git
+tag     = v4.33.0
+commit  = 15f6055e299ad5b89345e533cc2192f4cc00f659
+built_with = Lean 4.33.1 (the volume toolchain; the repo has no v4.33.1 tag,
+             and the v4.33.0 sources build and run against 4.33.1 — the
+             export header records the producing toolchain, see README)
+exporter_version = 3.1.0 (as recorded in the export's meta line)
+export_format    = NDJSON, format version 3.1.0
+binary_sha256_reference = 805ab4cc6a88dcef109644d201c3142261f524aecaf58b04913a9f029e21e9b5
+
+## nanoda (independent kernel checker, Rust)
+repo    = https://github.com/ammkrn/nanoda_lib.git
+version = 0.4.32
+commit  = 0da9f98feadd3a0a2ef4b3dbcf52a298a6fef929
+built_with = rustc 1.100.0 (0ef1bc386 2026-11-09), cargo 1.100.0, --release --locked
+binary_sha256_reference = a78a1b95917105ae639cd438bd35969f76a4a2e74f2a4055fae3340fb5a65176
+# Note: the older ammkrn/nanoda repository is deprecated (it targets the
+# pre-NDJSON text export format); nanoda_lib is its successor and consumes
+# the NDJSON format that current lean4export produces.
