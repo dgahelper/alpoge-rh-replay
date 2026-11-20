@@ -1,0 +1,1356 @@
+⚠ [8706/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteProductMultipliable (10s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InfiniteProductMultipliable.lean:15:55: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8707/8825] Built Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FiniteInterClosedBallOfSeparated (12s)
+⚠ [8708/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MatrixInductionTransvectionDiagonal (13s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonal.lean:97:25: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rowOp, hi, hki, hkt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonal.lean:133:25: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [colOp, hi, hki.symm, hkt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonal.lean:194:26: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv, hx, hD]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonal.lean:202:30: This simp argument is unused:
+  Function.update_of_ne hi
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv, hx, hi, hD, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonal.lean:202:56: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv, hx, hi, hD, Function.update_of_ne hi]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8709/8825] Built CompanionTheory.RealGroups.UnitaryAdmissibility.ArchimedeanUnitaryDual.StSandwich (13s)
+✔ [8710/8825] Built CompanionTheory.AutomorphicTheory.ThetaDilations.Nuabs (15s)
+⚠ [8711/8825] Built Formalism.PeriodIntegrals.UpqRep (19s)
+warning: src/Formalism/PeriodIntegrals/UpqRep.lean:141:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8712/8825] Built Formalism.UnipotentAdelicQuotients.SWXSDefs (26s)
+warning: src/Formalism/UnipotentAdelicQuotients/SWXSDefs.lean:21:0: automatically included section variable(s) unused in theorem `HeckeCharacterZeroLocus.SiegelWeilU.cT_one`:
+  [Fintype n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/Formalism/UnipotentAdelicQuotients/SWXSDefs.lean:111:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: src/Formalism/UnipotentAdelicQuotients/SWXSDefs.lean:115:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✔ [8713/8825] Built CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData (20s)
+⚠ [8714/8825] Built Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.EvalFg (19s)
+warning: src/Development/AutomorphicArithmetic/IntegralCasts/CapelliIdentities/EvalFg.lean:4:18: Variable name `inst` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _inst
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/Development/AutomorphicArithmetic/IntegralCasts/CapelliIdentities/EvalFg.lean:4:38: Variable name `inst_1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _inst_1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8715/8825] Built CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.PairOKOfInterlace (19s)
+⚠ [8716/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteProductMultipliableStatement (18s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InfiniteProductMultipliableStatement.lean:7:70: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InfiniteProductMultipliableStatement.lean:7:129: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InfiniteProductMultipliableStatement.lean:7:70: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.AbsTprod.abs_tprod` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InfiniteProductMultipliableStatement.lean:7:129: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.SW.AbsTprod.abs_tprod <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8717/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TprodComplementSplitFinset (19s)
+✔ [8718/8825] Built CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.CloudProd (23s)
+⚠ [8719/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LatticeBallCountRatioBound (21s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeBallCountRatioBound.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeBallCountRatioBound.lean:51:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Adelic.Packing.Sep.exists_near`:
+  [NormedSpace ℝ V]
+  [FiniteDimensional ℝ V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedSpace ℝ V] [FiniteDimensional ℝ V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8720/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MatrixInductionTransvectionDiagonalStatement (23s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonalStatement.lean:7:87: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonalStatement.lean:7:163: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonalStatement.lean:7:87: Unused tactic linter: `exact GlobalTheory.CompanionTheory.Adelic.StableRangeOne.matrix_induction` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixInductionTransvectionDiagonalStatement.lean:7:163: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.Adelic.StableRangeOne.matrix_induction <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8721/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.AnisotropicOfHenselAndSandwich (28s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwich.lean:36:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwich.lean:84:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwich.lean:92:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✔ [8722/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.IsCongIdealTwoTorsion (23s)
+⚠ [8723/8825] Built Formalism.SatakeDualWeyl.Statement (43s)
+warning: src/Formalism/SatakeDualWeyl/Statement.lean:23:0: automatically included section variable(s) unused in theorem `Formalism.UG.cT_one`:
+  [Fintype n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8724/8825] Built CompanionTheory.AutomorphicTheory.SchurLimitBounds.SchurOrthogonality.URepBasic (44s)
+✔ [8725/8825] Built CompanionTheory.HarishChandraModules.BesselParameterIntegrals.ContDiffOnExpPartialHomeomorphSymm (47s)
+⚠ [8726/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HenselStatement (22s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/HenselStatement.lean:14:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/HenselStatement.lean:15:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8727/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.FrameOfAnisotropicPlaneSplitting (26s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/FrameOfAnisotropicPlaneSplitting.lean:155:17: This simp argument is unused:
+  hsi'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hsu]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8728/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.PairingOfSandwichStatement (24s)
+⚠ [8729/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.DecompositionOfFrameWittTorus (29s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorus.lean:175:87: Variable name `hw` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hw
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorus.lean:229:23: `LinearEquiv.ofLinear` has been deprecated: Use `LinearEquiv.ofLinearMap` instead
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorus.lean:273:38: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8730/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ExistenceOfSandwichStatement (28s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatement.lean:13:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.RgFl.MaxLat.herm_add_left`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatement.lean:22:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.RgFl.MaxLat.herm_eq_sum`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatement.lean:53:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.RgFl.MaxLat.exists_basis_herm_le_one`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatement.lean:96:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.RgFl.MaxLat.IsLat.smul_mem`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatement.lean:162:19: `Finsupp.finset_sum_apply` has been deprecated: Use `Finsupp.finsetSum_apply` instead
+⚠ [8731/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.DeltaStatement (29s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DeltaStatement.lean:39:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [8732/8825] Built Formalism.PeriodIntegrals.KFinSmooth (14s)
+✔ [8733/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarMeasureIwasawaDecomposition (19s)
+⚠ [8734/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InvariantMeasureCompactCoverBound (20s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InvariantMeasureCompactCoverBound.lean:10:73: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InvariantMeasureCompactCoverBound.lean:10:73: Unused tactic linter: `exact @CompanionTheory.PlacePermOperatorBicommutantSpan.cover` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8735/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FundamentalDomainOfSubgroupFromCosetReps (21s)
+✔ [8736/8825] Built Formalism.UnipotentAdelicQuotients.SiegelWeilUnitaryConvergent (17s)
+✔ [8737/8825] Built Formalism.PeriodIntegrals.IsLowUnitH (22s)
+✔ [8738/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FourierTransformLatticeIndicator (21s)
+⚠ [8739/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.WeilOrthogonalGroupInvariance (21s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:44:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:45:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:46:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:47:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:48:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:49:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:50:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvariance.lean:91:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8740/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.EisensteinLatticeSumBound (29s)
+⚠ [8741/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.PlaneOfHenselAndPairing (48s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:30:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.HermPlane.lat_smul`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:38:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.HermPlane.lat_commens`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:38:85: Variable name `hp0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:77:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:72:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.HermPlane.lat_primitive`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:136:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.HermPlane.herm_add_left`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:140:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.HermPlane.herm_smul_left`:
+  [IsUltrametricDist L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsUltrametricDist L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:303:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.HermPlane.plane_of_pair`:
+  [ProperSpace L]
+  [CharZero L]
+  [FiniteDimensional L V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [ProperSpace L] [CharZero L] [FiniteDimensional L V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:349:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairing.lean:353:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8742/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.SandwichStatement (39s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatement.lean:119:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatement.lean:127:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatement.lean:132:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8743/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CuspRepresentativesFinite (39s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/CuspRepresentativesFinite.lean:76:24: This simp argument is unused:
+  RingOfIntegers.map_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sub, Matrix.mul_apply, Fin.sum_univ_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8744/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SimultaneousNormalFormMajorant (33s)
+✔ [8745/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.UnitBalancingImaginaryParts (38s)
+⚠ [8746/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ThetaFunctionModularity (37s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ThetaFunctionModularity.lean:48:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.ThetaUD.gauss_add`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ThetaFunctionModularity.lean:61:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.ThetaUD.gauss_sq`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8747/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.IwasawaDecompositionAdelicSL2 (30s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2.lean:19:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2.lean:20:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2.lean:28:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2.lean:37:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8748/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MobiusActionUpperHalfPlane (31s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlane.lean:22:66: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlane.lean:86:21: This simp argument is unused:
+  hinv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mob, mMat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlane.lean:89:21: This simp argument is unused:
+  neg_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mob, wMat, div_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8749/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SL2BruhatDecompositionIdentities (37s)
+⚠ [8750/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SchurFunctionCompactSupportModuloUnipotent (38s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:16:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.CharDensity.phi_eq_charFun`:
+  [FiniteDimensional ℝ V]
+  [BorelSpace V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ V] [BorelSpace V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:34:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.CharDensity.ker_nonneg`:
+  [FiniteDimensional ℝ V]
+  [MeasurableSpace V]
+  [BorelSpace V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ V] [MeasurableSpace V] [BorelSpace V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:39:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.CharDensity.continuous_ker`:
+  [FiniteDimensional ℝ V]
+  [MeasurableSpace V]
+  [BorelSpace V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ V] [MeasurableSpace V] [BorelSpace V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:43:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.CharDensity.ker_le`:
+  [FiniteDimensional ℝ V]
+  [MeasurableSpace V]
+  [BorelSpace V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ V] [MeasurableSpace V] [BorelSpace V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:253:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:264:13: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotent.lean:276:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8751/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LatticeFundamentalDomainVolume (35s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolume.lean:39:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.FD.embedding_bijective`:
+  [NumberField F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolume.lean:128:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolume.lean:128:10: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolume.lean:218:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8752/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AnnihilatorOfAnnihilatorLe (27s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:15:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:88:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:91:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:100:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:101:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:174:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLe.lean:175:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8753/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SumRhoEqTrace (26s)
+⚠ [8754/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsCuspReductionBound (34s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ExistsCuspReductionBound.lean:133:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8755/8825] Built CompanionTheory.AutomorphicTheory.ThetaDilations.IsOpenCoset (26s)
+warning: src/CompanionTheory/AutomorphicTheory/ThetaDilations/IsOpenCoset.lean:206:0: automatically included section variable(s) unused in theorem `CompanionTheory.PlacePermOperatorBicommutantSpan.fou_smul`:
+  [AddCommGroup V]
+  [TopologicalSpace V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [AddCommGroup V] [TopologicalSpace V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/AutomorphicTheory/ThetaDilations/IsOpenCoset.lean:304:21: This simp argument is unused:
+  integral_ofReal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e1, e2] at e
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8756/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteProductRenormalization (16s)
+⚠ [8757/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.AnisotropicOfHenselAndSandwichStatement (15s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwichStatement.lean:7:64: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwichStatement.lean:7:117: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwichStatement.lean:7:64: Unused tactic linter: `exact GlobalTheory.CompanionTheory.HermAniso.aniso` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AnisotropicOfHenselAndSandwichStatement.lean:7:117: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.HermAniso.aniso <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8758/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TprodComplementSplitFinsetStatement (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/TprodComplementSplitFinsetStatement.lean:8:74: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/TprodComplementSplitFinsetStatement.lean:8:137: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/TprodComplementSplitFinsetStatement.lean:8:74: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.TailCut.tprod_tail_cut` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/TprodComplementSplitFinsetStatement.lean:8:137: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.TailCut.tprod_tail_cut <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8759/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LatticeBallCountRatioBoundStatement (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeBallCountRatioBoundStatement.lean:7:86: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeBallCountRatioBoundStatement.lean:7:161: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeBallCountRatioBoundStatement.lean:7:86: Unused tactic linter: `exact GlobalTheory.CompanionTheory.Adelic.tsum_indicator_norm_le_packing` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeBallCountRatioBoundStatement.lean:7:161: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.Adelic.tsum_indicator_norm_le_packing <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8760/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MapMulVecEqOfTransposeMulMulEq (19s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MapMulVecEqOfTransposeMulMulEq.lean:23:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Adelic.OrthHaar.transvection_mulVec_apply`:
+  [TopologicalSpace R]
+  [IsTopologicalRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace R] [IsTopologicalRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MapMulVecEqOfTransposeMulMulEq.lean:38:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Adelic.OrthHaar.measurePreserving_transvection`:
+  [T2Space R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MapMulVecEqOfTransposeMulMulEq.lean:77:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Adelic.OrthHaar.scale_of_isUnit`:
+  [T2Space R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MapMulVecEqOfTransposeMulMulEq.lean:107:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Adelic.OrthHaar.transpose_transvection`:
+  [TopologicalSpace R]
+  [IsTopologicalRing R]
+  [T2Space R]
+  [LocallyCompactSpace R]
+  [SecondCountableTopology R]
+  [MeasurableSpace R]
+  [BorelSpace R]
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [TopologicalSpace
+  R] [IsTopologicalRing
+  R] [T2Space
+  R] [LocallyCompactSpace R] [SecondCountableTopology R] [MeasurableSpace R] [BorelSpace R] [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MapMulVecEqOfTransposeMulMulEq.lean:152:53: `zero_le'` has been deprecated: Use `zero_le` instead
+⚠ [8761/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.IwahoriUpperLowerFactorization (20s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/IwahoriUpperLowerFactorization.lean:70:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Iwahori.Gauss.sub_one_mul_mem`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8762/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HermitianAdjointExists (19s)
+⚠ [8763/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CongruenceEndomorphismInverseExists (18s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/CongruenceEndomorphismInverseExists.lean:24:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [8764/8825] Built CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.CloudPair (29s)
+⚠ [8765/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.IsPiecesPiece (25s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/IsPiecesPiece.lean:113:24: unused name: h2
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/IsPiecesPiece.lean:115:24: unused name: h2
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/IsPiecesPiece.lean:117:24: unused name: h2
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/IsPiecesPiece.lean:220:42: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/IsPiecesPiece.lean:279:19: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8766/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.AntiInvolutionSwapsUpperLower (20s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/AntiInvolutionSwapsUpperLower.lean:81:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.Iwahori.Unitary.st_block`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8767/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HenselStatementStatement (15s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/HenselStatementStatement.lean:7:75: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/HenselStatementStatement.lean:7:139: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/HenselStatementStatement.lean:7:75: Unused tactic linter: `exact GlobalTheory.CompanionTheory.LocalHensel.stHensel_holds` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/HenselStatementStatement.lean:7:139: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.LocalHensel.stHensel_holds <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8768/8825] Built Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Heckebasic (21s)
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/Heckebasic.lean:41:10: This simp argument is unused:
+  Set.indicator_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hx, hT a b x hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/Heckebasic.lean:47:10: This simp argument is unused:
+  Set.indicator_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hx, h']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/Heckebasic.lean:232:8: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/Heckebasic.lean:247:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/Heckebasic.lean:245:17: This simp argument is unused:
+  Subgroup.coe_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Units.val_mul, e, e0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8769/8825] Built Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeActMem (21s)
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/HeckeActMem.lean:39:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/Formalism/SatakeDualWeyl/AdelicIwasawaHecke/HeckeActMem.lean:40:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8770/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.FrameOfAnisotropicPlaneSplittingStatement (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/FrameOfAnisotropicPlaneSplittingStatement.lean:7:69: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/FrameOfAnisotropicPlaneSplittingStatement.lean:7:127: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/FrameOfAnisotropicPlaneSplittingStatement.lean:7:69: Unused tactic linter: `exact GlobalTheory.CompanionTheory.HermFrame.stFrame_of` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/FrameOfAnisotropicPlaneSplittingStatement.lean:7:127: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.HermFrame.stFrame_of <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8771/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.PairingOfSandwichStatementStatement (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PairingOfSandwichStatementStatement.lean:7:76: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PairingOfSandwichStatementStatement.lean:7:141: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PairingOfSandwichStatementStatement.lean:7:76: Unused tactic linter: `exact GlobalTheory.CompanionTheory.HermLat.pairing_of_sandwich` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PairingOfSandwichStatementStatement.lean:7:141: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.HermLat.pairing_of_sandwich <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8772/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.DecompositionOfFrameWittTorusStatement (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorusStatement.lean:7:84: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorusStatement.lean:7:157: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorusStatement.lean:7:84: Unused tactic linter: `exact GlobalTheory.CompanionTheory.FlDecomp.stDecomp_of_frame_witt_tor` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DecompositionOfFrameWittTorusStatement.lean:7:157: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.FlDecomp.stDecomp_of_frame_witt_tor <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8773/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ExistenceOfSandwichStatementStatement (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatementStatement.lean:7:83: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatementStatement.lean:7:155: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatementStatement.lean:7:83: Unused tactic linter: `exact GlobalTheory.CompanionTheory.RgFl.MaxLat.stExists_of_stSandwich` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/ExistenceOfSandwichStatementStatement.lean:7:155: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.RgFl.MaxLat.stExists_of_stSandwich <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8774/8825] Built CompanionTheory.HarishChandraModules.BesselParameterIntegrals.ExistsUniqueComplexification (26s)
+warning: src/CompanionTheory/HarishChandraModules/BesselParameterIntegrals/ExistsUniqueComplexification.lean:247:7: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8775/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.DeltaStatementStatement (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DeltaStatementStatement.lean:7:61: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DeltaStatementStatement.lean:7:111: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DeltaStatementStatement.lean:7:61: Unused tactic linter: `exact GlobalTheory.CompanionTheory.RgFl.stDelta` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/DeltaStatementStatement.lean:7:111: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.RgFl.stDelta <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8776/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarMeasureIwasawaDecompositionStatement (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarMeasureIwasawaDecompositionStatement.lean:7:87: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarMeasureIwasawaDecompositionStatement.lean:7:163: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarMeasureIwasawaDecompositionStatement.lean:7:87: Unused tactic linter: `exact GlobalTheory.CompanionTheory.Adelic.tripleProduct_map_leftInvariant` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarMeasureIwasawaDecompositionStatement.lean:7:163: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.Adelic.tripleProduct_map_leftInvariant <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8777/8825] Built CompanionTheory.AutomorphicTheory.SchurLimitBounds.SchurOrthogonality.URepSchur (33s)
+⚠ [8778/8825] Built Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes (36s)
+warning: src/Formalism/SharpRestriction/GlobalSchurBounds/GeneralLinearActions/GenusMassVolumes.lean:72:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: src/Formalism/SharpRestriction/GlobalSchurBounds/GeneralLinearActions/GenusMassVolumes.lean:76:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [8779/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InvariantMeasureCompactCoverBoundStatement (15s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InvariantMeasureCompactCoverBoundStatement.lean:7:92: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InvariantMeasureCompactCoverBoundStatement.lean:7:173: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InvariantMeasureCompactCoverBoundStatement.lean:7:92: Unused tactic linter: `exact GlobalTheory.CompanionTheory.Adelic.integral_fundamentalDomain_le_siegel` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/InvariantMeasureCompactCoverBoundStatement.lean:7:173: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.Adelic.integral_fundamentalDomain_le_siegel <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8780/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FundamentalDomainOfSubgroupFromCosetRepsStatement (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FundamentalDomainOfSubgroupFromCosetRepsStatement.lean:7:90: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FundamentalDomainOfSubgroupFromCosetRepsStatement.lean:7:169: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FundamentalDomainOfSubgroupFromCosetRepsStatement.lean:7:90: Unused tactic linter: `exact GlobalTheory.CompanionTheory.Adelic.unfold_coset_sum_fundamentalDomain` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FundamentalDomainOfSubgroupFromCosetRepsStatement.lean:7:169: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.Adelic.unfold_coset_sum_fundamentalDomain <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8781/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FourierTransformLatticeIndicatorStatement (13s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FourierTransformLatticeIndicatorStatement.lean:8:76: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FourierTransformLatticeIndicatorStatement.lean:8:141: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FourierTransformLatticeIndicatorStatement.lean:8:76: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.Core.fou_indicator_coset` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FourierTransformLatticeIndicatorStatement.lean:8:141: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.Core.fou_indicator_coset <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8782/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.WeilOrthogonalGroupInvarianceStatement (13s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvarianceStatement.lean:8:75: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvarianceStatement.lean:8:139: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvarianceStatement.lean:8:75: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.Core.OrthMeas.orth_meas` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/WeilOrthogonalGroupInvarianceStatement.lean:8:139: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.Core.OrthMeas.orth_meas <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8783/8825] Built CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.MapStdPoly (18s)
+⚠ [8784/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.SandwichStatementStatement (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatementStatement.lean:7:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatementStatement.lean:7:123: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatementStatement.lean:7:67: Unused tactic linter: `exact GlobalTheory.CompanionTheory.Lattice.stSandwich` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/SandwichStatementStatement.lean:7:123: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.Lattice.stSandwich <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8785/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.EisensteinLatticeSumBoundStatement (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/EisensteinLatticeSumBoundStatement.lean:8:70: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/EisensteinLatticeSumBoundStatement.lean:8:129: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/EisensteinLatticeSumBoundStatement.lean:8:70: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.LatSum.lattice_sum` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/EisensteinLatticeSumBoundStatement.lean:8:129: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.SW.LatSum.lattice_sum <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8786/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.PlaneOfHenselAndPairingStatement (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairingStatement.lean:7:84: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairingStatement.lean:7:157: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairingStatement.lean:7:84: Unused tactic linter: `exact GlobalTheory.CompanionTheory.HermPlane.stPlane_of_hensel_pairing` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/PlaneOfHenselAndPairingStatement.lean:7:157: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.HermPlane.stPlane_of_hensel_pairing <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8787/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CuspRepresentativesFiniteStatement (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/CuspRepresentativesFiniteStatement.lean:8:85: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/CuspRepresentativesFiniteStatement.lean:8:159: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/CuspRepresentativesFiniteStatement.lean:8:85: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.Core.exists_finset_row_completion` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/CuspRepresentativesFiniteStatement.lean:8:159: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.Core.exists_finset_row_completion <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8788/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.UnitBalancingImaginaryPartsStatement (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/UnitBalancingImaginaryPartsStatement.lean:8:80: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/UnitBalancingImaginaryPartsStatement.lean:8:149: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/UnitBalancingImaginaryPartsStatement.lean:8:80: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.UnitBalance.balance_by_units` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/UnitBalancingImaginaryPartsStatement.lean:8:149: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.UnitBalance.balance_by_units <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8789/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.IwasawaDecompositionAdelicSL2Statement (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2Statement.lean:8:71: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2Statement.lean:8:131: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2Statement.lean:8:71: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.Iwasawa.iwasawa_w_n` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IwasawaDecompositionAdelicSL2Statement.lean:8:131: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.SW.Iwasawa.iwasawa_w_n <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8790/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ThetaFunctionModularityStatement (15s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ThetaFunctionModularityStatement.lean:8:64: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ThetaFunctionModularityStatement.lean:8:117: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ThetaFunctionModularityStatement.lean:8:64: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.ThetaUD.main` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ThetaFunctionModularityStatement.lean:8:117: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.SW.ThetaUD.main <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8791/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SL2BruhatDecompositionIdentitiesStatement (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SL2BruhatDecompositionIdentitiesStatement.lean:8:94: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SL2BruhatDecompositionIdentitiesStatement.lean:8:177: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SL2BruhatDecompositionIdentitiesStatement.lean:8:94: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.Core.SL2BruhatDecomposition.decompositions` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SL2BruhatDecompositionIdentitiesStatement.lean:8:177: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.Core.SL2BruhatDecomposition.decompositions <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8792/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SchurFunctionCompactSupportModuloUnipotentStatement (13s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotentStatement.lean:8:93: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotentStatement.lean:8:175: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotentStatement.lean:8:93: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.CharDensity.density_of_integrable_charFun` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SchurFunctionCompactSupportModuloUnipotentStatement.lean:8:175: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.CharDensity.density_of_integrable_charFun <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8793/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MobiusActionUpperHalfPlaneStatement (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlaneStatement.lean:8:68: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlaneStatement.lean:8:125: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlaneStatement.lean:8:68: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.Core.Mobius.main` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MobiusActionUpperHalfPlaneStatement.lean:8:125: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.SW.Core.Mobius.main <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8794/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LatticeFundamentalDomainVolumeStatement (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolumeStatement.lean:8:59: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolumeStatement.lean:8:107: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolumeStatement.lean:8:59: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.FD.main` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/LatticeFundamentalDomainVolumeStatement.lean:8:107: Unused tactic linter: `(intros; apply GlobalTheory.CompanionTheory.SW.FD.main <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8795/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.RealGaussianFourierTransform (22s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/RealGaussianFourierTransform.lean:78:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.GaussOne.bil`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8796/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AnnihilatorOfAnnihilatorLeStatement (15s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLeStatement.lean:8:83: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLeStatement.lean:8:155: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLeStatement.lean:8:83: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.CofinalDual.selfDual_of_between` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/AnnihilatorOfAnnihilatorLeStatement.lean:8:155: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.CofinalDual.selfDual_of_between <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8797/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GramTransposeDualTraceIdentity (13s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/GramTransposeDualTraceIdentity.lean:29:8: This simp argument is unused:
+  Finset.sum_ite_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8798/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GaussianChangeOfVariablesIsometry (17s)
+✔ [8799/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelicCharacterExponentialFormula (18s)
+⚠ [8800/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SiegelMatrixSymmetricPosdefImag (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/SiegelMatrixSymmetricPosdefImag.lean:55:10: This simp argument is unused:
+  ZB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [blockDiagonal_apply, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8801/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TotallyRealIntegralBasisExists (15s)
+✔ [8802/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.QuadraticSetupInvariantUnderIsometry (16s)
+✔ [8803/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LatticeMatrixDeterminantFormula (18s)
+⚠ [8804/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsCuspReductionBoundStatement (15s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ExistsCuspReductionBoundStatement.lean:8:79: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ExistsCuspReductionBoundStatement.lean:8:147: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ExistsCuspReductionBoundStatement.lean:8:79: Unused tactic linter: `exact GlobalTheory.CompanionTheory.SW.SmallPair.exists_small_pair` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/ExistsCuspReductionBoundStatement.lean:8:147: Unused tactic linter: `(intros;
+  apply GlobalTheory.CompanionTheory.SW.SmallPair.exists_small_pair <;> assumption)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8805/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.DualLatticeParametrization (18s)
+✔ [8806/8825] Built CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.Bracket (16s)
+✔ [8807/8825] Built CompanionTheory.AutomorphicTheory.HeckeStandardModules.HeckeA (18s)
+⚠ [8808/8825] Built CompanionTheory.AutomorphicTheory.ThetaDilations.SqPosOfNe (21s)
+warning: src/CompanionTheory/AutomorphicTheory/ThetaDilations/SqPosOfNe.lean:45:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: src/CompanionTheory/AutomorphicTheory/ThetaDilations/SqPosOfNe.lean:115:19: This simp argument is unused:
+  Units.mul_inv_cancel_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Heisenberg₂, opD, mMat, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+    Matrix.cons_val_one, Matrix.cons_val_fin_one, zero_smul, add_zero, zero_add, mulVec_smul, dotProduct_smul,
+    smul_dotProduct, smul_add, smul_eq_mul, Units.inv_mul_cancel_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8809/8825] Built CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd (15s)
+✔ [8810/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinatePolynomialsFormMemKernelDifferential (16s)
+⚠ [8811/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarMeasureProdOfAddGroups (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarMeasureProdOfAddGroups.lean:18:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8812/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ContinuousDensitiesEqOfIntegralsOnCompacts (18s)
+⚠ [8813/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MeasureEqHaarProdOfLeftInvariant (16s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MeasureEqHaarProdOfLeftInvariant.lean:24:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MeasureEqHaarProdOfLeftInvariant.lean:32:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MeasureEqHaarProdOfLeftInvariant.lean:78:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8814/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MapMulEqOfNormOne (18s)
+✔ [8815/8825] Built CompanionTheory.AutomorphicTheory.SchurLimitBounds.SchurOrthogonality.SchurOrthogonality (22s)
+⚠ [8816/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.IsFibreFamilyTransport (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/IsFibreFamilyTransport.lean:35:55: This simp argument is unused:
+  Function.comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [τ.symm_apply_apply, hemb.lintegral_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8817/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MatrixTransvectionDiagonalDecomposition (18s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixTransvectionDiagonalDecomposition.lean:29:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.ArtinElem.liftT_toMatrix`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixTransvectionDiagonalDecomposition.lean:80:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.ArtinElem.matrix_ext_coord`:
+  [DecidableEq M]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq M] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixTransvectionDiagonalDecomposition.lean:121:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/MatrixTransvectionDiagonalDecomposition.lean:124:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8818/8825] Built CompanionTheory.HarishChandraModules.BesselParameterIntegrals.InPCommutatorOfInK (28s)
+✔ [8819/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarModularCharacterOfContinuousAction (13s)
+⚠ [8820/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HermitianUnitFormRepresentsUnit (17s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:11:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.UnitRep.hform_add_left`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:15:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.UnitRep.hform_add_right`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:19:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.UnitRep.hform_smul_left'`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:23:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.UnitRep.hform_smul_right'`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:37:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.UnitRep.hform_self_fixed`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:44:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.UnitRep.hform_self_congr`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:59:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HermitianUnitFormRepresentsUnit.lean:54:44: Variable name `hσ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hσ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8821/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FibreFamilySmul (10s)
+⚠ [8822/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarInvariantUnderTransvection (14s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarInvariantUnderTransvection.lean:19:12: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/HaarInvariantUnderTransvection.lean:71:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8823/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.DisintegrationDensityContinuous (10s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:25:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:53:5: Variable name `h0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:58:10: This simp argument is unused:
+  Set.indicator_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv, h1 v hv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:59:10: This simp argument is unused:
+  Set.indicator_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:70:10: This simp argument is unused:
+  Set.indicator_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:79:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.FibreFam.BumpFamily.measurable_lintegral`:
+  [BorelSpace V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BorelSpace V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:116:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.FibreFam.BumpFamily.lt_top`:
+  [MeasurableSpace X]
+  [BorelSpace X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace X] [BorelSpace X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/DisintegrationDensityContinuous.lean:134:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8824/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteFieldQuadraticFormPointCount (12s)
+warning: src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/AdelicAnalysis/FiniteFieldQuadraticFormPointCount.lean:16:0: automatically included section variable(s) unused in theorem `GlobalTheory.CompanionTheory.SW.QuadricCount.quadForm_add`:
+  [Fintype k]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype k] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8825/8825] Built CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GermConstantsEqAlongAffineSpaceSquare (13s)
+Build completed successfully (8825 jobs).
