@@ -127,8 +127,11 @@ function historySvg(hist) {
   });
   var last = hist[hist.length - 1];
   var lastX = X(times[times.length - 1], hist.length - 1), lastY = Y(last.with_evidence);
-  var sameDay = hist[0].t.slice(0, 10) === last.t.slice(0, 10);
-  function tlbl(t) { return sameDay ? t.slice(0, 10) + " " + t.slice(11, 16) + " UTC" : t.slice(0, 10); }
+  var sameDay = new Date(hist[0].t).toISOString().slice(0, 10) === new Date(last.t).toISOString().slice(0, 10);
+  function tlbl(t) {
+    var iso = new Date(t).toISOString();
+    return sameDay ? iso.slice(0, 10) + " " + iso.slice(11, 16) + " UTC" : iso.slice(0, 10);
+  }
   var s = '<svg viewBox="0 0 ' + W + " " + H + '" width="100%" role="img" ' +
     'aria-label="Line chart of modules with recorded evidence over time" style="display:block">';
   if (hist.length > 1) {
