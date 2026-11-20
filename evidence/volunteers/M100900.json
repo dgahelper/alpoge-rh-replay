@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    "M100900"
+  ],
+  "ended_utc": "2026-11-20T20:33:59.681136+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.RationalDualityOfAllCoefficients:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "a383e01d3787e8708b5ec0b009885d286a675e0b07ab627c75f908591ec60908",
+  "objects": {
+    "M100900": "d09997d49f466b13c7090d582743cf9607131567667e4f6234397193aa4334e9"
+  },
+  "bundle_sha256": "556b7a4af7e484b6c0420fce5c0baddf4fbc951e5f388a5a01ba515b1c503ab5",
+  "transcript_targets": {
+    "built": 0,
+    "replayed": 1,
+    "earlier_attempt": 0
+  },
+  "packet": "M100900",
+  "contributor": "mu-mei",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2382#issuecomment-7049981201",
+  "reviewed_utc": "2026-11-20T20:36:30.558626+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum. The completing transcript records 0 rebuilt and 1 replayed targets; 0 more targets appear in the separate earlier build transcript."
+}

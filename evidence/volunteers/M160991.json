@@ -1,0 +1,61 @@
+{
+  "tasks": [
+    "M160991"
+  ],
+  "module": "Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ContentBoundLevelIdeal",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2165#issuecomment-7049784405",
+  "ended_utc": "2026-11-20T20:22:38.251610+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "packages": {
+    "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "plausible": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+    "LeanSearchClient": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+    "importGraph": "16f02aa7642864af59f1ff0e384a015994db9118",
+    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+    "aesop": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+    "Qq": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+    "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+    "Cli": "6130a47896ce867c6a4a55373441e59e565bad0f"
+  },
+  "lake_manifest_sha256": "fee57ee9ed399d0a638ca955e5ad40a37a36eeb9b6dfd9f5964114fa7bbe4774",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "source_archive_sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc",
+  "source_sha256": "3bd20edeb8ed22e53f033e5f858041abab6c66c1ed86f12d5a9921c9caa80ef5",
+  "command": [
+    "lake",
+    "--no-cache",
+    "--no-ansi",
+    "build",
+    "+Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ContentBoundLevelIdeal:olean"
+  ],
+  "exit_code": 0,
+  "elapsed_wall_seconds": 28.656,
+  "guard": {
+    "logical_cpu_affinity": [
+      2
+    ],
+    "lean_threads": 1,
+    "network": "seccomp denies socket, socketpair, connect, io_uring_setup; offline socket probe passed",
+    "max_wall_seconds": 480,
+    "rss_stop_bytes": 4563402752,
+    "peak_group_rss_bytes": 3970842624,
+    "stop_reason": null,
+    "disk_floor_bytes": 12884901888
+  },
+  "log_sha256": "9b4465cd63d0c7e12cfe2df7a8613bd23ee9af8ac5863fb71e604c0f0f2a19c2",
+  "raw_log_sha256": "9b4465cd63d0c7e12cfe2df7a8613bd23ee9af8ac5863fb71e604c0f0f2a19c2",
+  "log_redactions": false,
+  "objects": {
+    "M160991": "79d43f02d7d52bf3b39f6d128487837269c3d3947e88df0a97735f708416a555"
+  },
+  "notes": [
+    "Dependency-only staging previously verified with lake --no-cache --no-build --rehash; exact target output was absent before this run.",
+    "Target build only, not a separate kernel audit or full RH replay.",
+    "The fresh .olean SHA-256 is recorded above. Optional compiled bundle is not included in the public evidence because native artifacts contain local build paths. No native artifact was altered."
+  ],
+  "packet": "M160991",
+  "contributor": "Amahane-Hikari",
+  "reviewed_utc": "2026-11-20T20:30:25.163634+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

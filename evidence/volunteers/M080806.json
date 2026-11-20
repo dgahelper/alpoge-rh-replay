@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    "M080806"
+  ],
+  "started_utc": "2026-11-20T20:37:28.816411+00:00",
+  "ended_utc": "2026-11-20T20:39:00.459279+00:00",
+  "elapsed_seconds": 91.6,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 6398860
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MeasurePreservingCompEquiv:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "748f9fe82f90891fb520d5cbcc0e198d9a20bd4fdd44b6da2979167750b8cb05",
+  "rebuilt_project_modules": [
+    "Development.AbelianVarietyTheory.Proofs.CovolumeBounds.EnormPowLeInvMeasureMulLintegralBall",
+    "ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FamilyLeCoords"
+  ],
+  "objects": {
+    "M080806": "be1189363a448e488c10db4a4dae9e8baf180236cd8d8644046bbd51135d762f"
+  },
+  "bundle_sha256": "6f978461ec052d9a10e3876a0abc9b3c4e47421b13c977844d95a0c06d576723",
+  "packet": "M080806",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2425#issuecomment-7050079333",
+  "reviewed_utc": "2026-11-20T20:45:00.107830+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

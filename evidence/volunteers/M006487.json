@@ -1,0 +1,35 @@
+{
+  "tasks": [
+    "M006487"
+  ],
+  "started_utc": "2026-11-20T20:26:20.572423+00:00",
+  "ended_utc": "2026-11-20T20:27:26.618859+00:00",
+  "elapsed_seconds": 66.0,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 6471928
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.CovolumeBounds.PderivIterEqPderivListOfDifferentiableOn:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "afa6635fd0065f49b2e5ea6868a907cfae88fcd660563c8b31c308e359b122a3",
+  "rebuilt_project_modules": [
+    "Development.AbelianVarietyTheory.Proofs.CovolumeBounds.NormPderivIterLeOfAnalyticAt"
+  ],
+  "objects": {
+    "M006487": "67e81eebcf80e1a17018f5045aa5301fe2d2bace24450f1910174ae8fc22fe14"
+  },
+  "bundle_sha256": "05313f8b0ef7ad00913fec38b3d3da371ad312d3cda578665547bea4f4a806b1",
+  "packet": "M006487",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2237#issuecomment-7049851308",
+  "reviewed_utc": "2026-11-20T20:30:17.627985+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

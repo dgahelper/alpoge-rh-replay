@@ -30,8 +30,12 @@ def host_resources():
   info['peak_child_rss_kib']=resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss
  except ImportError:pass
  return info
+def module_rows():
+    with gzip.open(base / 'modules.jsonl.gz', 'rt') as stream:
+        yield from map(json.loads, stream)
+
 def load():
- with gzip.open(base/'modules.jsonl.gz','rt') as f:rows=[json.loads(s) for s in f]
+ rows=list(module_rows())
  completed=base/'completed.tsv'
  if completed.exists():
   import csv
@@ -39,10 +43,17 @@ def load():
   for r in rows:
    if r['id'] in done:r['state']=done[r['id']]
  return rows
-def select(rows,target):
- out=[r for r in rows if target in (r['id'],r['packet'],r['module'])]
- if not out:raise SystemExit('Unknown task or packet: '+target)
- return out
+def select(rows, target, *, project_modules=None):
+    """Collect matching targets and, for builds, the names needed to classify the transcript."""
+    targets = []
+    for row in rows:
+        if project_modules is not None:
+            project_modules.add(row['module'])
+        if target in (row['id'], row['packet'], row['module']):
+            targets.append(row)
+    if not targets:
+        raise SystemExit('Unknown task or packet: ' + target)
+    return targets
 def cold_modules(rows, busy):
     """Rank available tasks with no project imports by their available direct consumers."""
     available = [r for r in rows if r['state'] == 'open'
@@ -130,8 +141,9 @@ def claims():
                 refs.add(match[1])
     return refs
 
-def run(targets,checkout,out,bundle,fast_bundle=False):
- project=checkout.resolve();output=out.resolve();output.mkdir(parents=True,exist_ok=False)
+def run(targets,checkout,out,bundle,fast_bundle=False,*,project_modules=None):
+ project=checkout.resolve();output=out.resolve()
+ if output.exists():raise SystemExit('Output directory already exists: '+str(output))
  dirs=project.parent
  env={**os.environ,'ELAN_HOME':str(dirs/'elan'),'XDG_CACHE_HOME':str(dirs/'cache')}
  toolchain = (project / 'lean-toolchain').read_text().strip()
@@ -143,12 +155,14 @@ def run(targets,checkout,out,bundle,fast_bundle=False):
  for r in targets:
   if digest(project/'src'/(r['module'].replace('.','/')+'.lean'))!=r['source_sha256']:raise SystemExit('Source hash mismatch: '+r['module'])
  cmd=['lake','build',*['+'+r['module']+':olean' for r in targets]]
+ output.mkdir(parents=True,exist_ok=False)
  log=output/'build.log'
  build=project/'.lake/build'
  started=datetime.datetime.now(datetime.timezone.utc);clock=time.monotonic()
  with log.open('wb') as f:result=subprocess.run([*launcher, *cmd],cwd=project,env=env,stdout=f,stderr=subprocess.STDOUT)
  elapsed=round(time.monotonic()-clock,1)
- rebuilt=rebuilt_imports(log.read_text(errors='replace'),{r['module'] for r in load()},{r['module'] for r in targets})
+ if project_modules is None:project_modules={r['module'] for r in module_rows()}
+ rebuilt=rebuilt_imports(log.read_text(errors='replace'),project_modules,{r['module'] for r in targets})
  receipt={'tasks':[r['id'] for r in targets],'started_utc':started.isoformat(),'ended_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'elapsed_seconds':elapsed,'host':host_resources(),'toolchain':version,'mathlib':mathlib,'inputs_manifest_sha256':digest(base.parent/'parts.sha256'),'command':cmd,'exit_code':result.returncode,'log_sha256':digest(log),'rebuilt_project_modules':rebuilt,'objects':{}}
  if result.returncode==0:
   for r in targets:receipt['objects'][r['id']]=digest(build/'lib/lean'/(r['module'].replace('.','/')+'.olean'))
@@ -163,22 +177,43 @@ def run(targets,checkout,out,bundle,fast_bundle=False):
       for f in path.parent.glob(path.name+'.*'):
        if f.is_file() and not f.is_symlink():tar.add(f,arcname=str(f.relative_to(build)),recursive=False)
    receipt['bundle_sha256']=digest(artifact)
- (output/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
+ receipt_temp=output/'receipt.json.tmp'
+ receipt_temp.write_text(json.dumps(receipt,indent=2)+'\n')
+ receipt_temp.replace(output/'receipt.json')
  print('Saved',output,'with exit status',result.returncode)
  return result.returncode
 def main():
  p=argparse.ArgumentParser(description=__doc__);s=p.add_subparsers(dest='action',required=True)
  nx=s.add_parser('next');nx.add_argument('--limit',type=int,default=8)
- nx.add_argument('--cold',action='store_true',help='show available individual modules with no project imports')
+ mode=nx.add_mutually_exclusive_group()
+ mode.add_argument('--warm',type=Path,metavar='INVENTORY',help='rank disjoint builds against a worker inventory')
+ nx.add_argument('--primary-inventory',type=Path,help='skip targets already on the primary')
+ nx.add_argument('--max-builds',type=int,default=3,help='maximum estimated project modules per warm suggestion')
+ mode.add_argument('--cold',action='store_true',help='show available individual modules with no project imports')
  nx.add_argument('--include-partial',action='store_true',help='also list partially completed packets (up to --limit more) whose open modules can be claimed individually')
  for n in ['show','claim','build']:
   sub=s.add_parser(n);sub.add_argument('target')
   if n=='build':
    sub.add_argument('checkout',type=Path);sub.add_argument('output',type=Path);sub.add_argument('--bundle',action='store_true')
    sub.add_argument('--fast-bundle',action='store_true',help='write the same tar members with gzip level 1 for faster packaging')
- a=p.parse_args();rows=load()
+ a=p.parse_args()
+ if a.action=='build':
+  project_modules=set()
+  targets=select(module_rows(),a.target,project_modules=project_modules)
+  return run(targets,a.checkout,a.output,a.bundle,a.fast_bundle,project_modules=project_modules)
+ rows=load()
  if a.action=='next':
+  if a.primary_inventory and not a.warm:p.error('--primary-inventory requires --warm')
+  if a.max_builds < 1:p.error('--max-builds must be positive')
   busy=claims()
+  if a.warm:
+   from replay_evidence import read_inventory
+   from warm import suggestions
+   cached=set(read_inventory(a.warm)['modules'])
+   primary=set(read_inventory(a.primary_inventory)['modules']) if a.primary_inventory else set()
+   for row,cost,consumers in suggestions(rows,busy,cached,primary,a.limit,a.max_builds):
+    print(row['id'],row['packet'],'estimated project builds',cost,'direct consumers',consumers)
+   return 0
   if a.cold:
    for row,sole,direct in cold_modules(rows,busy)[:max(0,a.limit)]:
     print(row['id'],row['packet'],row['module'],'sole-project-import consumers',sole,'direct consumers',direct)
@@ -200,6 +235,5 @@ def main():
   busy=claims()
   if any(r['id'] in busy or r['packet'] in busy or r['state']!='open' for r in sel):raise SystemExit('One or more modules are already claimed, observed, or assigned.')
   subprocess.run(['gh','issue','create','--repo',repo,'--title','Claim '+a.target,'--body','I am working on '+a.target+'. I will attach the input hashes, build transcript and receipt, or close this claim if I stop.'],check=True)
- else:return run(sel,a.checkout,a.output,a.bundle,a.fast_bundle)
  return 0
 if __name__=='__main__':sys.exit(main())

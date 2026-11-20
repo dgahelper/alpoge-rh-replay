@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    "M173692"
+  ],
+  "started_utc": "2026-11-20T20:28:17.590711+00:00",
+  "ended_utc": "2026-11-20T20:29:19.267076+00:00",
+  "elapsed_seconds": 61.7,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 6512696
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtData:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "162a1069ca3ea8424645ed4a582499e68163b5a99931fdb3979ee1f5546f3254",
+  "rebuilt_project_modules": [
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAt"
+  ],
+  "objects": {
+    "M173692": "873d1bf378efe724d989472cecaae9f6c79471678fd1095ec72def10aad5a7d3"
+  },
+  "bundle_sha256": "b1ed48457df9493268108022a31e7d8f5d8c6920845cd88683e48d47e130cb3a",
+  "packet": "M173692",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2297#issuecomment-7049887502",
+  "reviewed_utc": "2026-11-20T20:30:14.542591+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

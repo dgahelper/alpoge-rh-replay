@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M000032"
+  ],
+  "ended_utc": "2026-11-20T19:51:54.747287+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.PairOKOfInterlace:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "232f483bfa6490204b54e8324ca88ac78c539bfa403f060defbff815ac572076",
+  "objects": {
+    "M000032": "19a37aca35d8d44a1f5a78c08c960315514d091d048e689490a5fc62df74b629"
+  },
+  "bundle_sha256": "fe9a59d3f9ae2f1cf994aa45bc45bf0091aea79bbb1a0167d17ffbad122c3292",
+  "packet": "M000032",
+  "contributor": "Amahane-Hikari",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1645#issuecomment-7049155700",
+  "reviewed_utc": "2026-11-20T19:55:43.844791+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

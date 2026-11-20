@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    "M085283"
+  ],
+  "ended_utc": "2026-11-20T20:20:35.773312+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsThetaFrameFrames:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "e45ea39ae0538cafe37b5baeb8ac104e9756e79ab08ebc092f9ba234b17b0cc3",
+  "objects": {
+    "M085283": "b627a678acb04df3d71df636171b0d590f1aaa4ccf1759225784a089a20db51d"
+  },
+  "bundle_sha256": "12d9e9fd914c8e5597c0c1dcc0b5ddd3560127dac79b1f178f2197fe209e2514",
+  "transcript_targets": {
+    "built": 0,
+    "replayed": 1,
+    "earlier_attempt": 0
+  },
+  "packet": "M085283",
+  "contributor": "mu-mei",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2148#issuecomment-7049718127",
+  "reviewed_utc": "2026-11-20T20:21:48.334665+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum. The completing transcript records 0 rebuilt and 1 replayed targets; 0 more targets appear in the separate earlier build transcript."
+}

@@ -1,0 +1,35 @@
+{
+  "tasks": [
+    "M015464"
+  ],
+  "started_utc": "2026-11-20T19:23:20.927710+00:00",
+  "ended_utc": "2026-11-20T19:24:51.611449+00:00",
+  "elapsed_seconds": 88.4,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 4805140
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "e086bbc8ab56526bc3a4fce99964a2c8ad97c07f1ee12a55643a92f2ec105b53",
+  "rebuilt_project_modules": [
+    "Development.AbelianVarietyTheory.BlockTheory.DivisorBase.BoundaryPolynomialFunctions"
+  ],
+  "objects": {
+    "M015464": "49f4f8f193a46198af18512f832a991e2c40a3fdfe072b665906b35d7e8a6dba"
+  },
+  "bundle_sha256": "beeed3c84178184e4b0e80a61b8f6730ca0ece6412d9367e64a879adacbd6e65",
+  "packet": "M015464",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1161#issuecomment-7048609953",
+  "reviewed_utc": "2026-11-20T19:27:55.001616+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

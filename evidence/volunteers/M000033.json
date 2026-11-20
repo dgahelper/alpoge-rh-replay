@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    "M000033"
+  ],
+  "started_utc": "2026-11-20T20:04:10.120422+00:00",
+  "ended_utc": "2026-11-20T20:05:19.744466+00:00",
+  "elapsed_seconds": 69.6,
+  "host": {
+    "cpu_count": 4,
+    "mem_total_kib": 8014508,
+    "peak_child_rss_kib": 5872948
+  },
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.ProgYInjective:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "f71312376b129f0893b7b3cf6acb950641c35f024d56b24136d4cc996454c007",
+  "rebuilt_project_modules": [],
+  "objects": {
+    "M000033": "72fb6c319aca9219c0c629163975c17a901ca59b035694361c2f948f0b593a7f"
+  },
+  "packet": "M000033",
+  "contributor": "123454321bobbob-tech",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1941#issuecomment-7049416320",
+  "reviewed_utc": "2026-11-20T20:09:34.626024+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

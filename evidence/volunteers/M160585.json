@@ -1,0 +1,33 @@
+{
+  "tasks": [
+    "M160585"
+  ],
+  "started_utc": "2026-11-20T19:40:54.528470+00:00",
+  "ended_utc": "2026-11-20T19:41:04.405454+00:00",
+  "elapsed_seconds": 8.8,
+  "host": {
+    "cpu_count": 4,
+    "mem_total_kib": 16387328,
+    "peak_child_rss_kib": 6701092
+  },
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.SatDVR:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "45cf0c935b065d68b9513eb0e08dc1de6b1b8307ec7178f6e7924458ccd6b402",
+  "rebuilt_project_modules": [],
+  "objects": {
+    "M160585": "a49f3d5ac8bde7e68c40672b0327d12fc944fe86384594db087788de5c0ede3d"
+  },
+  "bundle_sha256": "9db45c08cc59d16f5cf2fb64fbfd26b4d9e5b1d6ad493228d951913c70ca1a1d",
+  "packet": "M160585",
+  "contributor": "sat3n",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1386#issuecomment-7049358688",
+  "reviewed_utc": "2026-11-20T20:09:50.514515+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

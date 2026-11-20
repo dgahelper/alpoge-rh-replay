@@ -97,6 +97,52 @@ Notes:
 - In Git Bash on Windows, prefix `docker exec` and `docker cp` commands that contain container paths with `MSYS_NO_PATHCONV=1`. Otherwise Git Bash rewrites `/work/...` into a Windows path.
 - Remove everything afterwards with `docker rm -f rhreplay` and `docker volume rm rhwork`.
 
+## Run a persistent volunteer worker
+
+Use a Linux or macOS controller with Python 3.9+, Docker and an authenticated GitHub CLI. The builder runs inside the prepared Linux container from the Docker instructions above. Use the same tracker revision on both sides. Keep GitHub credentials on the controller and use a named volume per native Lean toolchain and platform. An existing warm volume should already have known provenance. The first dispatcher build records its platform and pins under `.lake/build` and subsequent dispatcher builds check them.
+
+Capture the worker's inventory inside the container. The inventory contains the archive and toolchain pins, the Lean target triple, and project module IDs present on that worker. Refresh the controller checkout before selecting work.
+
+```bash
+docker exec rhreplay python3 /work/repo/tracker/replay_evidence.py inventory /work/vol/lean > worker.json
+python3 tracker/tasks.py next --warm worker.json --limit 20 > candidates.txt
+awk '{print $1}' candidates.txt > assignments.txt
+```
+
+Supply `--primary-inventory primary.json` when the primary has provided a recent snapshot from the same inventory command. Warm suggestions omit targets on either machine, skip occupied reservations, and favor available direct consumers per estimated missing project build. Each suggestion has a disjoint set of missing imports within this list. The default maximum is three missing project modules per target, adjustable with `--max-builds`. Presence in an inventory guides scheduling. Lake checks actual reuse on the receiver.
+
+Run the controller with your own evidence fork. This command opens public claims, uploads verified receipt, log and bundle assets to releases on your fork, and submits comments on granted claims.
+
+```bash
+python3 tracker/worker.py assignments.txt worker-state --jobs 2 \
+  --container rhreplay --fork YOUR-LOGIN/alpoge-rh-replay
+```
+
+Assignments may contain individual module or packet IDs. The controller bounds outstanding reservations and parallel builds with `--jobs` (default 1). Choose a value that fits the container's memory. It waits for the grant label and the matching bot comment. Replay artifacts stay under `/work/receipts` on the persistent builder volume. The controller stores verified evidence and a journal in `worker-state`. Use `--container-repo`, `--checkout` and `--receipts` for other container paths.
+
+Restart with the same command and state directory. A durable claim marker and issue history recover writes whose responses were lost. A builder lock and completed receipt let the controller reconnect after an interruption. After a conflict or failure, inspect `worker-state/state.json`, the issue and the numbered local log. Close abandoned claims. After resolving a recoverable error, add `--retry M000001` for that task. If the journal reports an unconfirmed public write, check the issue history before explicitly retrying. An interrupted or failed compiler attempt keeps its evidence on the builder.
+
+### Check evidence and measure receiver progress
+
+Verify an archived bundle independently with the controller's tracker. To check source and installed object hashes too, pass the prepared checkout. Older unbundled receipts require this checkout.
+
+```bash
+python3 tracker/replay_evidence.py verify M000001 path/to/receipt
+```
+
+When a requested module already exists in the worker cache and has no build line, the builder runs the pinned Lean kernel checker against its imported environment. It checks the installed object against the receipt before and after replay. The submission links `kernel-replay.json` alongside the receipt, bundle and Lake log. The record includes the exact command, per-module transcript, successful exit status and the SHA-256 of the receipt. Download it with the other assets for offline verification.
+
+For a transfer, capture the primary's inventory before installing reviewed, platform-compatible artifacts using the coordinator's existing procedure. On the primary, run the following inside its prepared environment.
+
+```bash
+python3 tracker/replay_evidence.py inventory /work/vol/lean > before.json
+# Install the reviewed artifacts, then check the exact granted target.
+python3 tracker/replay_evidence.py reuse-check M000001 /work/imported/receipt \
+  --checkout /work/vol/lean --before before.json
+```
+
+The receiver checks the native platform, pins, source and object hashes, then runs the original Lake targets with rebuilding and remote cache downloads disabled. Successful JSON output lists the checked targets and those absent from the before-inventory. Timed receipts also report new targets per producer Lake hour. For a wave, count distinct accepted new IDs and sum producer build times once per receipt. This measures target reuse. The final Main build, axiom audit and fresh kernel replay remain separate milestones.
+
 ## Troubleshoot a Lean version mismatch
 
 If `Cache/Requests.lean` reports a missing `Lake.PackageEntrySrc.path` case and the trace shows Lean 4.35.0, update your checkout. The replay uses Lean 4.33.1, and the verifier now calls that version explicitly through elan. Keep elan on PATH, then retry in a new directory on the build volume.
@@ -114,6 +160,10 @@ The run prints its Lean version near the start of the cache step. If it still fa
 Begin a comment on your claim with `Replay submission` on its own first line. Include the task or packet ID, exit status, elapsed time, and links to the receipt and log. For a large bundle, attach it to a release on your fork and include its SHA-256 digest. Check logs for personal paths before publishing. The README credits you while your evidence is pending. Keep the claim open for review. Maintainers check the grant, pinned toolchain and inputs, exact target list, successful transcript, and artifact digests before marking a volunteer build complete. Reviewed receipts go in `evidence/volunteers/` and appear in the README and module ledger. Maintainers close accepted claims as completed. Any later reuse or kernel replay is recorded separately. If a build fails, include the first Lean error, file and line, resource limits, and reproduction command.
 
 The final acceptance record separately checks the standard RH proposition, its axiom dependencies and the fresh kernel replay of Main. Module receipts are evidence of partial progress.
+
+For work on new proofs, the [proof reuse example](examples/proof-reuse/README.md)
+includes a duplicate-proof scanner, two reusable Lean lemmas and a pinned
+compiler check against 33 archive declarations.
 
 ## Coordinator and cloud helpers
 

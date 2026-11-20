@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    "M101468"
+  ],
+  "started_utc": "2026-11-20T20:34:49.782661+00:00",
+  "ended_utc": "2026-11-20T20:36:18.755583+00:00",
+  "elapsed_seconds": 89.0,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 6087384
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.RepApi:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "7ce1441096c209bf3b2e2a600de1a66b7528b6dfabe8b90041e1b9a9ee38ad6e",
+  "rebuilt_project_modules": [
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.RepAlg"
+  ],
+  "objects": {
+    "M101468": "bab0cec4b61c904a396e8daf72c694976550d1b0a4bcac016a3eb7fd249b547d"
+  },
+  "bundle_sha256": "db331fae65d01df081aed198ad12930de0362455e5d60af1c1e0672287f69899",
+  "packet": "M101468",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2395#issuecomment-7050025951",
+  "reviewed_utc": "2026-11-20T20:36:29.282448+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    "M174893"
+  ],
+  "module": "ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.TraceEqTraceRestrictOfRangeLe",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1364#issuecomment-7049333217",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "source_archive_sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc",
+  "source_sha256": "4e61693acb2ece62623028e9649b5a3756b4059990a2610c72608fd1fa6c0059",
+  "command": [
+    "lake",
+    "--no-cache",
+    "--no-ansi",
+    "build",
+    "+ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.TraceEqTraceRestrictOfRangeLe:olean"
+  ],
+  "exit_code": 0,
+  "ended_utc": "2026-11-20T19:59:57.732439+00:00",
+  "elapsed_wall_seconds": 10.203,
+  "peak_sampled_process_group_rss_bytes": 3804684288,
+  "log_sha256": "f2d375763fa63a77360971972ec2b868ecd864c64ff45e3f0bac10ee4763ced2",
+  "objects": {
+    "M174893": "886c7baf75beeab78fa66803713e7f6354abf970cf1afce33c5c1a5f259a49c3"
+  },
+  "prerequisites_no_build_rehash": {
+    "exit_code": 0,
+    "log_sha256": "73c0c1a4ff7d435b6022a01ccf8e3b3c756728f20cb668fe5ec0c2f0dbd3a0db"
+  },
+  "notes": [
+    "Single CPU, offline socket guard, pinned official Linux toolchain and unchanged source.",
+    "Only the stated module was built. No separate kernel audit or full RH replay.",
+    "No compiled bundle published."
+  ],
+  "packet": "M174893",
+  "contributor": "Amahane-Hikari",
+  "reviewed_utc": "2026-11-20T20:02:46.358315+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

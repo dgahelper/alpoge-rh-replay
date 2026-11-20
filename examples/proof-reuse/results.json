@@ -1,0 +1,52 @@
+{
+  "archive_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "source_sha256": {
+    "ReplayTopology.lean": "b6050ce2c6e1815a314ceba504df527d399eac495c3e62c132c59b4d2ff26af0",
+    "check.py": "fcea5921cde74e2c7f39b529047f8f499296005ac2f61eadf3e8b556b5265953",
+    "scan.py": "a47955c6e7262648b4efa9d58697eb31243ca076dca17c33207fad059e463c19"
+  },
+  "runs": [
+    {
+      "execution": "native AArch64 Linux container",
+      "compiler": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+      "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "kernel_replayed": "ReplayTopology",
+      "checked": {
+        "continuous_unitsHom": 19,
+        "totallyDisconnected_quotient": 14
+      },
+      "heartbeats": {
+        "Original": {
+          "continuous_unitsHom": 3105,
+          "totallyDisconnected_quotient": 8753
+        },
+        "Shared": {
+          "continuous_unitsHom": 1925,
+          "totallyDisconnected_quotient": 658
+        }
+      },
+      "library_heartbeats": 840
+    },
+    {
+      "execution": "x86-64 Linux container under emulation on Apple Silicon",
+      "compiler": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+      "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "kernel_replayed": "ReplayTopology",
+      "checked": {
+        "continuous_unitsHom": 19,
+        "totallyDisconnected_quotient": 14
+      },
+      "heartbeats": {
+        "Original": {
+          "continuous_unitsHom": 3105,
+          "totallyDisconnected_quotient": 8753
+        },
+        "Shared": {
+          "continuous_unitsHom": 1925,
+          "totallyDisconnected_quotient": 658
+        }
+      },
+      "library_heartbeats": 840
+    }
+  ]
+}

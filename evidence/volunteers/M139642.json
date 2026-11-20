@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    "M139642"
+  ],
+  "started_utc": "2026-11-20T20:17:33.038175+00:00",
+  "ended_utc": "2026-11-20T20:18:49.437912+00:00",
+  "elapsed_seconds": 76.4,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 6433996
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.FunctionalCalculusLaws:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "26371898bc9c26f04895745a5949d6728dd086c31f51ea37ff5fcc7cbc6dd17f",
+  "rebuilt_project_modules": [
+    "Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.EigBasis",
+    "ReciprocityTheory.ReductiveGroups.DiscreteSeries.DefsRep"
+  ],
+  "objects": {
+    "M139642": "5ce08f333e33040d6f55f2fd790efca8d24d21e610ff2aeb0f52e4e66227df29"
+  },
+  "bundle_sha256": "1511a296e1866f08bb687b5cc95b1f8eda133d8ff463b3f376b778300f7597f5",
+  "packet": "M139642",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2111#issuecomment-7049682291",
+  "reviewed_utc": "2026-11-20T20:21:52.725849+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

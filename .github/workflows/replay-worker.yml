@@ -1,0 +1,31 @@
+name: Native replay worker
+on:
+  pull_request:
+    paths: ['tracker/*.py', 'tracker/summary.json', '.github/workflows/replay-worker.yml']
+  push:
+    paths: ['tracker/*.py', 'tracker/summary.json', '.github/workflows/replay-worker.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay-worker:
+    if: github.event_name != 'push' || github.event.repository.fork || github.ref == 'refs/heads/main'
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install the pinned native compiler
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y elan
+          elan toolchain install leanprover/lean4:v4.33.1
+      - name: Exercise twenty builds, restart and receiver reuse
+        env:
+          REPLAY_NATIVE_TEST: '1'
+        run: python3 -m unittest discover -s tracker -p 'test_worker.py' -v

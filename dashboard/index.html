@@ -51,6 +51,13 @@
   .tag { color: var(--muted); font-size: 0.8rem; border: 1px solid var(--border); border-radius: 10px; padding: 0 7px; margin-left: 6px; white-space: nowrap; }
   footer { margin-top: 40px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 12px; }
   code { font-size: 0.85em; word-break: break-all; }
+  #rate-chart { display: block; width: 100%; height: 168px; }
+  #rate-chart text { fill: var(--muted); font: 12px system-ui, sans-serif; }
+  #rate-chart line { stroke: var(--border); }
+  #rate-chart rect { fill: var(--accent); }
+  #rate-chart rect.negative { fill: var(--muted); }
+  #rate-details { margin-top: 8px; }
+  #rate-details summary { cursor: pointer; color: var(--accent); }
   #error { color: #dc2626; }
 </style>
 </head>
@@ -69,10 +76,26 @@
   <div class="bar big-bar" role="img" aria-label="Overall progress"><div class="big-fill" id="bigfill" style="width:0%"></div></div>
   <div class="cards" id="cards"></div>
 
+  <section aria-labelledby="rate-heading">
+    <h2 id="rate-heading">Modules recorded per hour</h2>
+    <p class="sub" id="rate-period"></p>
+    <div id="rate-plot" hidden>
+      <svg id="rate-chart" role="img" aria-labelledby="rate-heading rate-period"></svg>
+      <details id="rate-details">
+        <summary>Hourly values</summary>
+        <table><thead><tr><th>Hour ending (UTC)</th><th class="num">Net modules</th></tr></thead>
+          <tbody id="rate-rows"></tbody></table>
+      </details>
+    </div>
+    <div class="cards" id="rate-stats"></div>
+    <p class="sub" id="rate-note"></p>
+  </section>
+
   <div id="history-section">
     <h2>Modules with recorded evidence over time</h2>
-    <p class="sub">From the git history of <code>tracker/completed.tsv</code> — each point is the
-    number of ledger rows at that commit.</p>
+    <p class="sub">From the first-parent git history of <code>tracker/completed.tsv</code> — each
+    point is the number of unique tracked module IDs recorded in the ledger at that commit,
+    the same counting rule as the hourly chart above.</p>
     <div id="history-chart"></div>
   </div>
 
@@ -152,6 +175,66 @@ function historySvg(hist) {
 function card(n, l) {
   return '<div class="card"><div class="n">' + esc(n) + '</div><div class="l">' + esc(l) + "</div></div>";
 }
+function renderRate(history, remaining) {
+  const hours = history ? history.hours : [];
+  const period = el("rate-period");
+  let estimate = "Unavailable";
+  let note = "A full hour of ledger history is needed to measure the pace.";
+  if (hours.length) {
+    const utc = seconds => new Date(seconds * 1000).toISOString().slice(0, 16).replace("T", " ");
+    const start = utc(hours[0].end - 3600);
+    const end = utc(hours[hours.length - 1].end);
+    const windowLabel = hours.length + (hours.length === 1 ? " hour" : " hours");
+    period.textContent = "Net change in modules with evidence in each 60-minute interval, "
+      + start + " to " + end + " UTC. Review batches can produce spikes.";
+    el("rate-plot").hidden = false;
+    el("rate-rows").innerHTML = hours.map(h => "<tr><td>" + utc(h.end)
+      + '</td><td class="num">' + fmt(h.net_modules) + "</td></tr>").join("");
+    const svg = el("rate-chart");
+    function draw() {
+      const width = Math.max(260, svg.clientWidth);
+      const left = 54, right = width - 12, top = 14, bottom = 122;
+      const min = Math.min(0, ...hours.map(h => h.net_modules));
+      const max = Math.max(0, ...hours.map(h => h.net_modules));
+      const y = n => bottom - (n - min) * (bottom - top) / (max - min || 1);
+      const step = (right - left) / hours.length;
+      const barWidth = Math.min(78, step * 0.72);
+      const x = i => left + step * (i + 0.5);
+      let marks = "";
+      for (const tick of new Set([min, 0, max])) {
+        marks += '<line x1="' + left + '" x2="' + right + '" y1="' + y(tick) + '" y2="' + y(tick)
+          + '"/><text x="' + (left - 5) + '" y="' + (y(tick) + 4) + '" text-anchor="end">' + fmt(tick) + '</text>';
+      }
+      const labelEvery = Math.max(1, Math.ceil(58 / step));
+      hours.forEach((h, i) => {
+        const value = h.net_modules;
+        marks += '<rect x="' + (x(i) - barWidth / 2) + '" y="' + Math.min(y(value), y(0))
+          + '" width="' + barWidth + '" height="' + Math.abs(y(value) - y(0))
+          + '" class="' + (value < 0 ? "negative" : "") + '"><title>' + utc(h.end)
+          + ' UTC · ' + fmt(value) + ' net modules</title></rect>';
+        const last = hours.length - 1;
+        if (i === last || (i % labelEvery === 0 && last - i >= labelEvery)) {
+          const labelX = Math.max(left + 16, Math.min(right - 16, x(i)));
+          marks += '<text x="' + labelX + '" y="143" text-anchor="middle">' + utc(h.end).slice(11) + '</text>';
+        }
+      });
+      svg.innerHTML = marks + '<text x="' + ((left + right) / 2)
+        + '" y="164" text-anchor="middle">Hour ending (UTC)</text>';
+    }
+    draw();
+    new ResizeObserver(draw).observe(svg);
+    el("rate-stats").innerHTML = card(fmt(Math.round(history.per_hour * 10) / 10),
+      "net modules/hour over " + windowLabel);
+    estimate = history.eta || "No positive pace";
+    note = "The projection divides remaining modules by the average hourly net gain over the past "
+      + windowLabel + ", including idle time. Module difficulty and review pace can change.";
+  } else {
+    period.textContent = history ? "Waiting for a full hour of observations." : "Ledger history unavailable for this snapshot.";
+  }
+  if (!remaining) estimate = "All modules recorded";
+  el("rate-stats").insertAdjacentHTML("beforeend", card(estimate, "projected full module coverage (UTC)"));
+  el("rate-note").textContent = note + " Final proof verification requires a separate end-to-end replay and audit.";
+}
 fetch("data.json")
   .then(function (r) { if (!r.ok) { throw new Error("data.json: HTTP " + r.status); } return r.json(); })
   .then(function (d) {
@@ -164,6 +247,8 @@ fetch("data.json")
       card(fmt(t.remaining), "modules remaining") +
       card(fmt(t.packets), "work packets") +
       card(fmt(d.packets.fully_done), "packets fully done");
+
+    renderRate(d.ledger_history, t.remaining);
 
     var hist = d.history || [];
     if (hist.length === 0) {

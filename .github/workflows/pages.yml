@@ -23,9 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Full history: generate_data.py builds the progress-over-time
-          # series from the git history of tracker/completed.tsv.
-          fetch-depth: 0
+          fetch-depth: 0  # Sample historical module coverage for the rate chart.
       - name: Regenerate dashboard data from tracker files
         run: python3 dashboard/generate_data.py
       - uses: actions/upload-pages-artifact@v3

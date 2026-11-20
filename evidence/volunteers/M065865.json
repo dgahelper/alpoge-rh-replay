@@ -1,0 +1,35 @@
+{
+  "tasks": [
+    "M065865"
+  ],
+  "started_utc": "2026-11-20T19:55:12.865079+00:00",
+  "ended_utc": "2026-11-20T19:56:51.845643+00:00",
+  "elapsed_seconds": 96.1,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 5911480
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.HeightProofs.CommuteGelfandInvariantMatrixUnitsOfGlRel:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "7b9b4f91c344f7412eecd71fa84dc41762e0ad46b715281715634c35e43d9b5e",
+  "rebuilt_project_modules": [
+    "Development.AbelianVarietyTheory.Proofs.HeightProofs.PowEntryCommutator"
+  ],
+  "objects": {
+    "M065865": "7e2b90784349a8c1239760b6f5d8424de7df25ae21e81f74f8ba0d85e66c7fa4"
+  },
+  "bundle_sha256": "e67b34ecee0d2804c27811a309d7e081c6b9d1b34ff09659693186d951447ce8",
+  "packet": "M065865",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1731#issuecomment-7049250334",
+  "reviewed_utc": "2026-11-20T20:02:35.837503+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

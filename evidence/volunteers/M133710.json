@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    "M133710"
+  ],
+  "started_utc": "2026-11-20T20:16:43.694129+00:00",
+  "ended_utc": "2026-11-20T20:17:43.627110+00:00",
+  "elapsed_seconds": 59.9,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 6502984
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AutomorphicSpectrum.Proofs.MetricProofs.GenUIsGenFam:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "b4a820da5afd50b67b234e3ee22b961e72bc502acc567d0d6ced98bea7138e04",
+  "rebuilt_project_modules": [
+    "Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordTieCompEquiv",
+    "Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericFlagOverGenericField"
+  ],
+  "objects": {
+    "M133710": "9ada11258a2e19fccd1e4503146b93baee101e2b32450fd5443245e6732e9800"
+  },
+  "bundle_sha256": "70ef7e5898cb830393bf40c72c8dde737c20990f07485a95a7d6977269402e66",
+  "packet": "M133710",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2108#issuecomment-7049660997",
+  "reviewed_utc": "2026-11-20T20:21:53.827607+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

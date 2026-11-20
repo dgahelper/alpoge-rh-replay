@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    "M000069"
+  ],
+  "started_utc": "2026-11-20T20:09:53.046279+00:00",
+  "ended_utc": "2026-11-20T20:11:10.334833+00:00",
+  "elapsed_seconds": 77.3,
+  "host": {
+    "cpu_count": 4,
+    "mem_total_kib": 8014508,
+    "peak_child_rss_kib": 5909252
+  },
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+CompanionTheory.AutomorphicTheory.HeckeStandardModules.ExistsCen:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "6f0391283c99387f02ad993ab9cb56d3cc2c03b4618d9650654bbb04a878b562",
+  "rebuilt_project_modules": [],
+  "objects": {
+    "M000069": "31097b1e39a7716404bc7ff4513af1cf71f30168ecc489547f930e3c74e3dd23"
+  },
+  "packet": "M000069",
+  "contributor": "123454321bobbob-tech",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/2031#issuecomment-7049531619",
+  "reviewed_utc": "2026-11-20T20:16:17.488749+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

@@ -1,0 +1,35 @@
+{
+  "tasks": [
+    "M100723"
+  ],
+  "started_utc": "2026-11-20T19:55:35.960786+00:00",
+  "ended_utc": "2026-11-20T19:56:52.166053+00:00",
+  "elapsed_seconds": 73.8,
+  "host": {
+    "cpu_count": 16,
+    "mem_total_kib": 8024536,
+    "peak_child_rss_kib": 5939948
+  },
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.PublishedTheorems.Divisors\u2082.ExistsHorizontalGeneratorOfCharts:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "ec3fe517a2bd0ef462f94f5be1c7430bef0a5932347817bd0b85c4a6fb286060",
+  "rebuilt_project_modules": [
+    "Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn"
+  ],
+  "objects": {
+    "M100723": "af0b9195265be3e61672b30baafeb0a6f14e2d0e24d2e3174f29dbf7d872f43f"
+  },
+  "bundle_sha256": "79a4ea83623da5c99f26c3165d35f58a678f43cf86968e4aa0ec47eb79b5d2e7",
+  "packet": "M100723",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/1736#issuecomment-7049250534",
+  "reviewed_utc": "2026-11-20T20:02:34.953195+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}
