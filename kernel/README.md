@@ -34,7 +34,9 @@ costs, starting with the smallest cone that matters: the statement itself.
    kernel). The checker configuration permits exactly the axioms
    `Audit.lean` permits — `propext`, `Classical.choice`, `Quot.sound` —
    plus `Lean.trustCompiler`, with the Nat and String kernel extensions
-   enabled.
+   enabled. The checker runs in strict mode
+   (`unpermitted_axiom_hard_error: true`): a declaration depending on
+   any other axiom is a hard error, not a silent skip.
 
 ## Reference run (measured, 2026-11-20)
 
@@ -54,10 +56,14 @@ Export facts:
 - Meta line: exporter lean4export 3.1.0, **format version 3.1.0**, produced
   from Lean **4.33.1** (githash `819816b2e0a3bf405af45ae5c7af2491d8f5bee6`,
   the replay's pinned toolchain).
-- Declaration records: **51,211** — 40,045 theorems, 10,149 definitions,
-  967 inductives, 46 opaque, 4 quot. nanoda reports "Checked 53240
-  declarations", counting constructors and recursors inside inductive
-  groups individually.
+- Declaration records: **51,214** — 40,045 theorems, 10,149 definitions,
+  967 inductives, 46 opaque, 4 quot, and 3 axioms: `propext`,
+  `Quot.sound`, `Classical.choice` — exactly the axioms `Audit.lean`
+  permits. nanoda reports "Checked 53240 declarations", counting
+  constructors and recursors inside inductive groups individually.
+  (An earlier version of this README said 51,211 — the counting code
+  looked for axioms under a key the exporter never emits. See
+  "Recount and strict-mode rerun" below.)
 - SHA-256 of the reference export:
   `2e8cb9c6b6807c6583c4673368496d45c72012ef0c98c54c2379bb76bed09df6`
   (the export itself is a build artifact and is not committed; the script
@@ -74,6 +80,34 @@ Checked 53240 declarations with no typechecker errors, 1 pretty printer errors: 
 The pretty-printer error is cosmetic: it comes from nanoda's pretty
 printer (`pretty_printer.rs`) being asked to print the axiom list after
 checking; it is not a checking error, and the exit code is 0.
+
+### Recount and strict-mode rerun (2026-11-20)
+
+Two corrections to the reference run above, both prompted by review:
+
+- **Recount.** The script counted declaration records by kind, but
+  looked for axioms under the key `ax`; lean4export emits `axiom`, so
+  the 3 axiom records contributed 0 to the published total. A
+  record-by-record recount of the reference export (unchanged, same
+  SHA-256 as above) gives **51,214** declaration records: 40,045
+  theorems, 10,149 definitions, 967 inductives, 46 opaque, 4 quot,
+  3 axioms. The 3 axioms are `propext`, `Quot.sound`, and
+  `Classical.choice` — precisely the set `Audit.lean` permits. The
+  script now counts with the corrected kind set, prints the per-kind
+  breakdown, and fails loudly on any record shape it does not
+  recognize, so an unrecognized kind can never again silently drop
+  out of the total.
+- **Strict-mode rerun.** The original run had
+  `unpermitted_axiom_hard_error: false`, under which nanoda *skips*
+  declarations that use an unlisted axiom, and its summary omits the
+  skipped list — so the log above left open whether anything was
+  skipped. The checker stage (only that stage) was rerun on the same
+  export with `unpermitted_axiom_hard_error: true`, the one change to
+  the configuration: **exit 0 in 36.0 s**, same "no typechecker
+  errors" output. No declaration in the cone depends on an axiom
+  outside the permitted set (`propext`, `Classical.choice`,
+  `Quot.sound`, `Lean.trustCompiler`). The script now runs the
+  checker in strict mode by default.
 
 ### Negative controls
 

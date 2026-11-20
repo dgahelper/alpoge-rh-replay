@@ -12,7 +12,8 @@
 #      cone with lean4export (NDJSON format);
 #   3. type-checks the export with nanoda (nanoda_lib, a Rust kernel
 #      implementation that shares no code with Lean's kernel), permitting
-#      exactly the axioms Audit.lean permits, plus Lean.trustCompiler;
+#      exactly the axioms Audit.lean permits, plus Lean.trustCompiler,
+#      in strict mode — an unlisted axiom is a hard error, not a skip;
 #   4. prints a PASS/FAIL summary with measured sizes and runtimes.
 #
 # This is a PILOT, not part of the required replay, and it covers only the
@@ -152,22 +153,36 @@ EXPORT_BYTES="$(stat -c%s "$OUT/pilot.ndjson")"
 DECLS="$(python3 - "$OUT/pilot.ndjson" <<'PYEOF'
 import json, sys
 # Declaration record kinds in the NDJSON export format (format_ndjson.md):
-# axiom, definition, theorem, opaque, quot, inductive. Constructors and
-# recursors are grouped inside the inductive record, so an independent
-# checker may report a higher declaration count than the record count here.
-decl_kinds = {"ax", "def", "thm", "opaque", "quot", "inductive"}
-n = 0
+# axiom, definition ("def"), theorem ("thm"), opaque, quot, inductive.
+# Constructors and recursors are grouped inside the inductive record, so
+# an independent checker may report a higher declaration count than the
+# record count here. A declaration record is a single-key object whose
+# key is one of the kinds; every other record in the format is the meta
+# line (single key "meta") or a name/level/expression record whose object
+# has several keys and contains no declaration kind. Count every kind
+# encountered and FAIL on anything unrecognized: a silently skipped kind
+# publishes a wrong total. (That is not hypothetical — axioms were once
+# counted under the key "ax", which the exporter never emits, and the
+# 3 axiom records dropped out of the published count.)
+decl_kinds = {"axiom", "def", "thm", "opaque", "quot", "inductive"}
+counts = {k: 0 for k in decl_kinds}
 with open(sys.argv[1]) as f:
     for line in f:
         try:
             obj = json.loads(line)
         except Exception:
             continue
-        if isinstance(obj, dict) and decl_kinds.intersection(obj):
-            n += 1
-print(n)
+        if not isinstance(obj, dict):
+            continue
+        kinds = decl_kinds.intersection(obj)
+        if len(obj) == 1 and kinds:
+            counts[next(iter(kinds))] += 1
+        elif kinds or (len(obj) == 1 and "meta" not in obj):
+            sys.exit(f"unrecognized record shape in export: {sorted(obj)[:4]}")
+print(" ".join(f"{k}={counts[k]}" for k in sorted(counts)), file=sys.stderr)
+print(sum(counts.values()))
 PYEOF
-)"
+)" || fail "counting declaration records in the export failed"
 echo "EXPORT_DONE bytes=$EXPORT_BYTES declarations=$DECLS file=$OUT/pilot.ndjson"
 
 # ---- step 3: independent kernel check ----------------------------------------
@@ -178,7 +193,7 @@ cat > "$OUT/nanoda-config.json" <<EOF
   "num_threads": $JOBS,
   "stack_size_bytes": 1073741824,
   "permitted_axioms": ["propext", "Classical.choice", "Quot.sound", "Lean.trustCompiler"],
-  "unpermitted_axiom_hard_error": false,
+  "unpermitted_axiom_hard_error": true,
   "nat_extension": true,
   "string_extension": true,
   "print_success_message": true
