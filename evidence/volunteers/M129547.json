@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M129547"
+  ],
+  "ended_utc": "2026-11-20T18:42:59.575428+00:00",
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AutomorphicSpectrum.Proofs.GeometryProofs.AlgIndepOfSameAdjoin:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "9c04c9df84f95e29fcc4f6f2f6e60fae7c308d33e3d28ff46be8325e5d4d7375",
+  "objects": {
+    "M129547": "fce2f2555ac165d2a71bbbb9fd4413699e59a5c4a555a66456ad0511197e84eb"
+  },
+  "bundle_sha256": "e3a4c2f2381392989a4a2de1ab7805dbd44883b44d1f6546deee99aa40b9ad6b",
+  "packet": "M129547",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/601#issuecomment-7047743052",
+  "reviewed_utc": "2026-11-20T18:44:43.143746+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

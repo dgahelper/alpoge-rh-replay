@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    "M002998"
+  ],
+  "ended_utc": "2026-11-20T17:19:24.538690+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "ee1a253054d04f48f0174712f93b8cbb61dd8ab72088ccb7b6ebd9ad63ce4dd6",
+  "objects": {
+    "M002998": "de2216a17d223ba4277838200f42894005c1a268595173fee7c7b3fd84e5ac23"
+  },
+  "bundle_sha256": "34bf90768a93179c9b5ff277c219852d40841f1b39e1aaae6868b46d63c66f97",
+  "packet": "M002998",
+  "contributor": "SeriousRising",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/124#issuecomment-7045969982",
+  "reviewed_utc": "2026-11-20T17:23:51.023658+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum.",
+  "kernel_evidence": {
+    "module": "Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair",
+    "log_sha256": "4b92caefed3034b04f8b0873ee50284b6028cffa2347d52b2e98b26ba3dd5bcf",
+    "scope": "Contributor supplied a module-level kernel replay transcript and reported a successful exit."
+  }
+}

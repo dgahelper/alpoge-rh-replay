@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M016067"
+  ],
+  "ended_utc": "2026-11-20T18:51:48.357279+00:00",
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.DivisorProofs.AwayHomCompAlgebraMap:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "42eca9bf5b88f3dbbdae62905009307083d68d5df18259c040286f10e1bd27e7",
+  "objects": {
+    "M016067": "0c9922b73dfce8c6b4d1804b4798d7d4e28782c6fdfeab5415049e4fb080ed40"
+  },
+  "bundle_sha256": "c70e808072430d07c5c4e67a6ee0e8dbe345d95d56b9f748114db5390751b534",
+  "packet": "M016067",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/695#issuecomment-7047929452",
+  "reviewed_utc": "2026-11-20T18:53:49.468048+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M162283"
+  ],
+  "ended_utc": "2026-11-20T18:56:06.286522+00:00",
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+GroundTheory.ArithmeticGeometry.ModularCurves.WeierstrassCharts:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "6f59b42835ba6e4fdd22e2338d5855e963a83198e8175f9368318b7427f281e8",
+  "objects": {
+    "M162283": "f9ca3d5f8c3ccbf278c48e56689db4b4c72b07bdb87224999ab3411f1716966b"
+  },
+  "bundle_sha256": "5b3b0b2049a8a66a3956724e50fdfb5cdb3ecd50a6eb9d3b564de90c20398df1",
+  "packet": "M162283",
+  "contributor": "vivekshivarajkumar",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/674#issuecomment-7048133026",
+  "reviewed_utc": "2026-11-20T19:03:42.453850+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

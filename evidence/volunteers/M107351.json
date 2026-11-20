@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M107351"
+  ],
+  "ended_utc": "2026-11-20T18:53:32.671959+00:00",
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.OrbitalIntegrals.TwistedOrbitalIntegrals.HeckeRepresentationSatake:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "840e7917f9ce09ba7c8de84a1a73c4af2584cca1be231da19a281e0c96f5eed7",
+  "objects": {
+    "M107351": "519b5cbe7edded99c64f5888def008f4b1234922043d5c26bd846a4c1ce902e7"
+  },
+  "bundle_sha256": "0f0312a083ab39656df7eb50fd2b5f803990f34ca7a82cd6f3c6982bcca6b005",
+  "packet": "M107351",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/709#issuecomment-7047964702",
+  "reviewed_utc": "2026-11-20T18:58:56.795314+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

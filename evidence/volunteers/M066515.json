@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M066515"
+  ],
+  "ended_utc": "2026-11-20T18:52:33.932605+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.WeierstrassPAddOfNeOfDerivNeZero:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "081b0e659fbc89e707d372a74ce1247ec9219fa11733d70793a198bc7903c802",
+  "objects": {
+    "M066515": "13b04b64424804f57f2000f56be15069f4d9a02e2cdcd8e7b4cbbfaba2b558df"
+  },
+  "bundle_sha256": "1b10895e00c80c000be0d0f3b93eb1de7ffcc4ca923795e6aa8590c8bf7642a5",
+  "packet": "M066515",
+  "contributor": "gabeldev",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/707#issuecomment-7047946193",
+  "reviewed_utc": "2026-11-20T18:53:45.700972+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

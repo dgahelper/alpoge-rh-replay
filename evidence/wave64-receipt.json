@@ -1,0 +1,545 @@
+{
+  "primary_workers": 1,
+  "requested_helpers": 63,
+  "provisioned_helpers": 20,
+  "helpers_imported": 20,
+  "helpers_removed": 20,
+  "started_utc": "2026-11-20T17:07:55.356431+00:00",
+  "reuse_check_passed_utc": "2026-11-20T17:45:53.396588216Z",
+  "cleanup_confirmed_utc": "2026-11-20T17:46:20.647558+00:00",
+  "distinct_modules_in_bundles": 5894,
+  "new_modules_imported": 3764,
+  "granted_claims": [
+    {
+      "issue": 22,
+      "task": "M136510",
+      "accepted": true
+    },
+    {
+      "issue": 23,
+      "task": "M058401",
+      "accepted": true
+    },
+    {
+      "issue": 24,
+      "task": "M021979",
+      "accepted": true
+    },
+    {
+      "issue": 25,
+      "task": "M123818",
+      "accepted": true
+    },
+    {
+      "issue": 26,
+      "task": "M091794",
+      "accepted": true
+    },
+    {
+      "issue": 27,
+      "task": "M085409",
+      "accepted": true
+    },
+    {
+      "issue": 28,
+      "task": "M025586",
+      "accepted": true
+    },
+    {
+      "issue": 29,
+      "task": "M133511",
+      "accepted": true
+    },
+    {
+      "issue": 30,
+      "task": "M057416",
+      "accepted": true
+    },
+    {
+      "issue": 31,
+      "task": "M083527",
+      "accepted": true
+    },
+    {
+      "issue": 32,
+      "task": "M064420",
+      "accepted": true
+    },
+    {
+      "issue": 33,
+      "task": "M072100",
+      "accepted": true
+    },
+    {
+      "issue": 34,
+      "task": "M024563",
+      "accepted": true
+    },
+    {
+      "issue": 35,
+      "task": "M090614",
+      "accepted": true
+    },
+    {
+      "issue": 36,
+      "task": "M134007",
+      "accepted": true
+    },
+    {
+      "issue": 37,
+      "task": "M099228",
+      "accepted": true
+    },
+    {
+      "issue": 38,
+      "task": "M040036",
+      "accepted": true
+    },
+    {
+      "issue": 39,
+      "task": "M129288",
+      "accepted": true
+    },
+    {
+      "issue": 40,
+      "task": "M069028",
+      "accepted": true
+    },
+    {
+      "issue": 41,
+      "task": "M083832",
+      "accepted": true
+    },
+    {
+      "issue": 42,
+      "task": "M100540",
+      "accepted": false
+    },
+    {
+      "issue": 43,
+      "task": "M074487",
+      "accepted": false
+    },
+    {
+      "issue": 44,
+      "task": "M085862",
+      "accepted": false
+    },
+    {
+      "issue": 45,
+      "task": "M014323",
+      "accepted": false
+    },
+    {
+      "issue": 46,
+      "task": "M124912",
+      "accepted": false
+    },
+    {
+      "issue": 47,
+      "task": "M130304",
+      "accepted": false
+    },
+    {
+      "issue": 48,
+      "task": "M174688",
+      "accepted": false
+    },
+    {
+      "issue": 49,
+      "task": "M168896",
+      "accepted": false
+    },
+    {
+      "issue": 50,
+      "task": "M014033",
+      "accepted": false
+    },
+    {
+      "issue": 51,
+      "task": "M169460",
+      "accepted": false
+    },
+    {
+      "issue": 52,
+      "task": "M120150",
+      "accepted": false
+    },
+    {
+      "issue": 53,
+      "task": "M018348",
+      "accepted": false
+    },
+    {
+      "issue": 54,
+      "task": "M110476",
+      "accepted": false
+    },
+    {
+      "issue": 55,
+      "task": "M155516",
+      "accepted": false
+    },
+    {
+      "issue": 56,
+      "task": "M134276",
+      "accepted": false
+    },
+    {
+      "issue": 57,
+      "task": "M128457",
+      "accepted": false
+    },
+    {
+      "issue": 58,
+      "task": "M028088",
+      "accepted": false
+    },
+    {
+      "issue": 59,
+      "task": "M086353",
+      "accepted": false
+    },
+    {
+      "issue": 60,
+      "task": "M072991",
+      "accepted": false
+    },
+    {
+      "issue": 61,
+      "task": "M006519",
+      "accepted": false
+    },
+    {
+      "issue": 62,
+      "task": "M074773",
+      "accepted": false
+    },
+    {
+      "issue": 63,
+      "task": "M007972",
+      "accepted": false
+    },
+    {
+      "issue": 64,
+      "task": "M013491",
+      "accepted": false
+    },
+    {
+      "issue": 65,
+      "task": "M007088",
+      "accepted": false
+    },
+    {
+      "issue": 66,
+      "task": "M147854",
+      "accepted": false
+    },
+    {
+      "issue": 67,
+      "task": "M129582",
+      "accepted": false
+    },
+    {
+      "issue": 68,
+      "task": "M130487",
+      "accepted": false
+    },
+    {
+      "issue": 69,
+      "task": "M138441",
+      "accepted": false
+    },
+    {
+      "issue": 70,
+      "task": "M083938",
+      "accepted": false
+    },
+    {
+      "issue": 71,
+      "task": "M069179",
+      "accepted": false
+    },
+    {
+      "issue": 72,
+      "task": "M153978",
+      "accepted": false
+    },
+    {
+      "issue": 73,
+      "task": "M109256",
+      "accepted": false
+    },
+    {
+      "issue": 74,
+      "task": "M134128",
+      "accepted": false
+    },
+    {
+      "issue": 75,
+      "task": "M070279",
+      "accepted": false
+    },
+    {
+      "issue": 76,
+      "task": "M085438",
+      "accepted": false
+    },
+    {
+      "issue": 77,
+      "task": "M162655",
+      "accepted": false
+    },
+    {
+      "issue": 78,
+      "task": "M165497",
+      "accepted": false
+    },
+    {
+      "issue": 79,
+      "task": "M140405",
+      "accepted": false
+    },
+    {
+      "issue": 80,
+      "task": "M085282",
+      "accepted": false
+    },
+    {
+      "issue": 81,
+      "task": "M154737",
+      "accepted": false
+    },
+    {
+      "issue": 82,
+      "task": "M000572",
+      "accepted": false
+    },
+    {
+      "issue": 83,
+      "task": "M064502",
+      "accepted": false
+    },
+    {
+      "issue": 84,
+      "task": "M009460",
+      "accepted": false
+    }
+  ],
+  "accepted_bundles": [
+    {
+      "worker": 1,
+      "claim_issue": 22,
+      "target": "Development.ResolutionOfSingularities.EmbeddedResolution.HironakaTheorem",
+      "bundle_sha256": "0164a2e9e1e6a325b1c65d089eab111949a1faa4bee1a9df1513e7fde62c51fc"
+    },
+    {
+      "worker": 2,
+      "claim_issue": 23,
+      "target": "Development.AbelianVarietyTheory.Proofs.FlagMeasures.HermitianDoubleCosetAmplitudeBoundLocalStatement",
+      "bundle_sha256": "adbb0913b2ccb61fd1dce071ce605e2bec1ae828fc34d6ccd025958ce2183a3c"
+    },
+    {
+      "worker": 3,
+      "claim_issue": 24,
+      "target": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvrEmbeddingDeterminantValueStatement",
+      "bundle_sha256": "f3ff17e9fdcc67a1430feedcd1b6f97983ad769e0b5581f8e0138e38e91ad9d4"
+    },
+    {
+      "worker": 4,
+      "claim_issue": 25,
+      "target": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GrothendieckExistenceClosed",
+      "bundle_sha256": "54a8989a1b74f5ee3afc495d6b01d16f1e4d9b5ac8d09ac1b5029c01f503cdd7"
+    },
+    {
+      "worker": 5,
+      "claim_issue": 26,
+      "target": "Development.AbelianVarietyTheory.Proofs.TorusSplitting.NormProdSumThetaLeExpTorusStatement",
+      "bundle_sha256": "f0099e5dbfd4b3a4e4584035ad37780423da3a8b6db28bece9aa7b5c27bb54aa"
+    },
+    {
+      "worker": 6,
+      "claim_issue": 27,
+      "target": "Development.AbelianVarietyTheory.Proofs.ModuliProofs.FinrankTangentPELFamilyLeSymmetricDomainStatement",
+      "bundle_sha256": "9af365634b4f3ac8bc95934a0fa757d4c5ffaad1a6bc5b41a86988fc8ffa9650"
+    },
+    {
+      "worker": 7,
+      "claim_issue": 28,
+      "target": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFormalGroupLawLogWithLinearPartStatement",
+      "bundle_sha256": "6e2be915ac16f7529914cd99b052bc4ae3a93d8ecffe82f383f5213a62261696"
+    },
+    {
+      "worker": 8,
+      "claim_issue": 29,
+      "target": "Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentRowsBaseMetricStatement",
+      "bundle_sha256": "1a7bb9186b52ea442cf6ca733ddf37240477bb95245156146ddb5a8a023a5cd4"
+    },
+    {
+      "worker": 9,
+      "claim_issue": 30,
+      "target": "Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsAdelicTorusMeasureStabiliserHaarStatement",
+      "bundle_sha256": "853df68ee0a45a7d8cb9359a9cd48f997804f952dd93f4ee0409a8e8c29f28e5"
+    },
+    {
+      "worker": 10,
+      "claim_issue": 31,
+      "target": "Development.AbelianVarietyTheory.Proofs.JetHarmonics.DepthBoundFromCharactersPointDatumStatement",
+      "bundle_sha256": "b6f5895369483323c9c953fb4b65043f8b20428e894b9fb683c2426de737fccf"
+    },
+    {
+      "worker": 11,
+      "claim_issue": 32,
+      "target": "Development.AbelianVarietyTheory.Proofs.GenericRegularity.GenericFrameIntegralOffFinitelyManyFunctions",
+      "bundle_sha256": "a5f4e5f2393b29589951cdfb90a698631cba26fe3c54d299d799f805c03baa25"
+    },
+    {
+      "worker": 12,
+      "claim_issue": 33,
+      "target": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LemmaLSeriesWeightsOfGreenCuspidalParametrisatio",
+      "bundle_sha256": "a19dd356b7434387704c0df68ed87ab7381433104e66bb31621ab5b0bed9193f"
+    },
+    {
+      "worker": 13,
+      "claim_issue": 34,
+      "target": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCuspCentre",
+      "bundle_sha256": "b64d7d513e8d0db69350190f45bc72fda6c0965afbc7d87c2e2971e8075663e2"
+    },
+    {
+      "worker": 14,
+      "claim_issue": 35,
+      "target": "Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsIntegralKeyInvariantRuleCharZeroStatement",
+      "bundle_sha256": "eba4ead31d1afdc22f14b9ca169354cc382dbf37c5e679e0a26fafaddc2c126b"
+    },
+    {
+      "worker": 15,
+      "claim_issue": 36,
+      "target": "Development.AutomorphicSpectrum.Proofs.MetricProofs.LogDetEigenFramePlurisubharmonicStatement",
+      "bundle_sha256": "7dbda19a2039b3343ca079da1d2233cef3219e54f31bf4f6e6e01efb168bd327"
+    },
+    {
+      "worker": 16,
+      "claim_issue": 37,
+      "target": "Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ThetaSectionSupportEqUnivStatement",
+      "bundle_sha256": "c2ee3300d8e7565809fac782ffc0d6f1924c9a62380a68f85e0ebe1338aefe33"
+    },
+    {
+      "worker": 17,
+      "claim_issue": 38,
+      "target": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.L2ExtensionLogCanonical",
+      "bundle_sha256": "aa2d3ea38a896b419ad427b690933648c290a5927019089a37bf5a767cbddf14"
+    },
+    {
+      "worker": 18,
+      "claim_issue": 39,
+      "target": "Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.LinkedTowerPowerSumStatement",
+      "bundle_sha256": "152ae095aa2f25f85dedae9aa3f1879845fe6a0f7078c7509d52d9870d1d3117"
+    },
+    {
+      "worker": 19,
+      "claim_issue": 40,
+      "target": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsFramedFCrystalOfStratifiedPhiModule",
+      "bundle_sha256": "18b3a1a30878f79e5004a2f52e824e15e8d16795866a81b100fc8433238b3c82"
+    },
+    {
+      "worker": 20,
+      "claim_issue": 41,
+      "target": "Development.AbelianVarietyTheory.Proofs.JetHarmonics.FamilySetupCayleyRecursion",
+      "bundle_sha256": "6ca2e89b4f6aaf760f95f4852c4e33667af18143d4a631b54e6f4ad0a8b7c621"
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-11-20T17:41:51.716629652Z",
+      "message": "WAVE_BUNDLE_VERIFIED 2 342 207"
+    },
+    {
+      "timestamp": "2026-11-20T17:41:57.766785616Z",
+      "message": "WAVE_BUNDLE_VERIFIED 1 498 705"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:04.83384051Z",
+      "message": "WAVE_BUNDLE_VERIFIED 3 533 967"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:12.085131672Z",
+      "message": "WAVE_BUNDLE_VERIFIED 4 527 1219"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:17.848397605Z",
+      "message": "WAVE_BUNDLE_VERIFIED 5 336 1375"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:21.872432566Z",
+      "message": "WAVE_BUNDLE_VERIFIED 7 243 1481"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:27.933106948Z",
+      "message": "WAVE_BUNDLE_VERIFIED 6 302 1621"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:34.479770308Z",
+      "message": "WAVE_BUNDLE_VERIFIED 8 318 1754"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:40.333078092Z",
+      "message": "WAVE_BUNDLE_VERIFIED 11 321 1883"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:47.486028826Z",
+      "message": "WAVE_BUNDLE_VERIFIED 10 393 2041"
+    },
+    {
+      "timestamp": "2026-11-20T17:42:57.636855124Z",
+      "message": "WAVE_BUNDLE_VERIFIED 9 549 2240"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:08.1841528Z",
+      "message": "WAVE_BUNDLE_VERIFIED 12 533 2450"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:12.733226202Z",
+      "message": "WAVE_BUNDLE_VERIFIED 15 291 2557"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:22.951583984Z",
+      "message": "WAVE_BUNDLE_VERIFIED 13 604 2795"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:28.895552447Z",
+      "message": "WAVE_BUNDLE_VERIFIED 16 340 2918"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:38.661455122Z",
+      "message": "WAVE_BUNDLE_VERIFIED 14 561 3135"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:46.006724353Z",
+      "message": "WAVE_BUNDLE_VERIFIED 17 439 3295"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:50.31208295Z",
+      "message": "WAVE_BUNDLE_VERIFIED 18 338 3409"
+    },
+    {
+      "timestamp": "2026-11-20T17:43:57.841991355Z",
+      "message": "WAVE_BUNDLE_VERIFIED 19 441 3562"
+    },
+    {
+      "timestamp": "2026-11-20T17:44:08.554218316Z",
+      "message": "WAVE_BUNDLE_VERIFIED 20 601 3764"
+    },
+    {
+      "timestamp": "2026-11-20T17:44:08.562074747Z",
+      "message": "WAVE_UNIQUE 5894 WAVE_NEW 3764 WAVE_TARGETS 20"
+    },
+    {
+      "timestamp": "2026-11-20T17:45:53.396588216Z",
+      "message": "WAVE_NO_BUILD_PASSED 20 5894 3764"
+    },
+    {
+      "timestamp": "2026-11-20T17:45:53.415052764Z",
+      "message": "WAVE_MERGE_EXIT=0"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Coordinator progress
 
-Updated 2026-11-20 17:10 UTC.
+Updated 2026-11-20 17:57 UTC.
 
 The full source build, axiom audit and fresh-kernel verification of RH are pending. Volunteers can claim work using the [contributor guide](CONTRIBUTING.md).
 
@@ -66,3 +66,14 @@ The coordinator filed 63 standard GitHub module claims for cloud helpers alongsi
 [Coordinator claims](https://github.com/rohanarun/alpoge-rh-replay/issues?q=is%3Aissue+author%3Arohanarun+label%3Aclaim)
 
 Render provisioned 20 of 63 requested helper services.
+
+20 helper bundles are ready, covering 5,894 distinct modules. 0 helpers were last seen compiling.
+
+The primary accepted 20 batch targets with rebuilding disabled. The bundles added 3,764 distinct modules absent from the primary. All 20 launched helpers were removed after the merge.
+
+[Cloud replay receipt](evidence/wave64-receipt.json)
+
+```text
+WAVE_NO_BUILD_PASSED 20 5894 3764
+WAVE_MERGE_EXIT=0
+```

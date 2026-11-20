@@ -1,0 +1,35 @@
+{
+  "tasks": [
+    "M150069"
+  ],
+  "module": "Formalism.LocalToGlobal.NumberFieldFamilies.OwnStruct",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/275#issuecomment-7047211147",
+  "ended_utc": "2026-11-20T18:11:33.192837+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "source_archive_sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc",
+  "source_sha256": "a3c982067143e5288390c77c60efe12dc2c2a0803cdb54ecf6fb913dc8339e11",
+  "command": [
+    "lake",
+    "build",
+    "+Formalism.LocalToGlobal.NumberFieldFamilies.OwnStruct:olean"
+  ],
+  "exit_code": 0,
+  "elapsed_wall_seconds": 8.814,
+  "log_sha256": "283196c4f8c352c8fdf621abe7f4ce94249eb4e402aa8a14fd694a7d9d9c799c",
+  "objects": {
+    "M150069": "66f2e0cee11a06ba65ebbd9b2b3d6fe1aca28685b683189a723bacc33a72f756"
+  },
+  "bundle_sha256": "e51ecae1600931ec020207b208ab8acc728de647f9091bde7c68031a7d810c14",
+  "notes": [
+    "Official pinned direct Lake binary, no elan wrapper; isolated Linux with fresh HOME.",
+    "One nonfatal deprecation warning: String.mk at 51:61.",
+    "Only this module was built; no separate kernel or full RH replay.",
+    "Optional bundle includes only the verified .olean, not companion build objects."
+  ],
+  "packet": "M150069",
+  "contributor": "Amahane-Hikari",
+  "reviewed_utc": "2026-11-20T18:20:09.286754+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

@@ -1,0 +1,37 @@
+{
+  "tasks": [
+    "M103506"
+  ],
+  "ended_utc": "2026-11-20T17:20:06.377898+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.TwSingle:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "43a89f8916be54421a4c9c36c788d918c26823ff796e7f4c13465cfba7085ff2",
+  "objects": {
+    "M103506": "c2e68590277cd7f99a54d9e24c7718590f7d943d6fdf4bec13a8074a5a7ef2dd"
+  },
+  "bundle_sha256": "da3344e3285e081a55e2a71b9e7a0cebd240707cba3e1abb0ec96aa2af89e5fe",
+  "run": "https://github.com/Genius-Cai-wen-zheng/alpoge-rh-replay/actions/runs/44781921989",
+  "packet": "M103506",
+  "contributor": "Genius-Cai-wen-zheng",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/126#issuecomment-7045987064",
+  "reviewed_utc": "2026-11-20T17:23:51.729405+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum.",
+  "kernel_evidence": {
+    "module": "Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.TwSingle",
+    "log_sha256": "93a6337780c305a803f4b2eca6e6ef87273b82d8514e5127e41f58093174d04a",
+    "scope": "Confirmed successful GitHub Actions kernel replay step and reviewed the theorem axiom report.",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axioms_log_sha256": "ad5b81ea1568cd30183084d7aeb49047e516b2e074cc75599a81cc3e088a7eb6"
+  }
+}

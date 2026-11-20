@@ -1,0 +1,21 @@
+name: Validate tracker data
+on:
+  pull_request:
+    paths: ['tracker/**', 'completed/**', 'evidence/**', 'verify.sh', '.github/workflows/validate-tracker.yml']
+  push:
+    branches: [main]
+    paths: ['tracker/**', 'completed/**', 'evidence/**', 'verify.sh', '.github/workflows/validate-tracker.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check that the ledger files agree with each other
+        run: python3 tracker/validate_tracker.py
+      - name: Regression-test the validator against a corrupted receipt
+        run: python3 tracker/test_validate_tracker.py

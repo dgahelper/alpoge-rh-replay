@@ -19,13 +19,25 @@ modules that are the sole project import of more available tasks, then those
 with more available direct consumers. These counts describe the source graph.
 Use the displayed module ID to claim a single module.
 
-Choose a packet from the live suggestions or a single open module. Replace the sample identifier below with your selection.
+Choose a packet from the live suggestions or a single open module. See [Choosing a task](#choosing-a-task) below for how depth affects build cost and how to work a partially completed packet. Replace the sample identifier below with your selection.
 
 ```bash
 python3 tracker/tasks.py claim P0123
 ```
 
 The claim command opens a public issue. You can also open an issue manually with a title of the form `Claim P0123` or `Claim M000001`. Check for overlapping claims after submitting. Wait for the claim-granted label and matching bot comment before starting. A serialized workflow preserves existing valid grants and processes simultaneous new requests in issue-number order. Close a claim if you stop working on it. The snapshot states in the index describe coordinator progress at the recorded time. Open claim issues supply the live volunteer assignments. The coordinator's full run also continues in the background.
+
+## Choosing a task
+
+Depth is project-import depth: it counts the chain of project modules a module imports. Mathlib arrives prebuilt from the pinned cache, but project modules do not. On a cold machine Lake builds the transitive project imports of your target locally before the target itself, so cold build cost grows quickly with depth. A shallow packet or a single shallow module is the right first task; a depth-100 packet can mean building thousands of project modules first. A first build on a new machine also pays the one-time prepare step: the archive download and the Mathlib cache fill a volume of roughly 11 GB.
+
+`next` suggests packets whose modules are all still open. Once any module in a packet has evidence, the packet leaves those suggestions even though its remaining modules are still open work. Run
+
+```bash
+python3 tracker/tasks.py next --include-partial
+```
+
+to also list these partial packets, with open/total counts, shallowest and most-open first. Packets containing coordinator-assigned modules are not listed. A partial packet cannot be claimed as a packet: the claim bot reserves every module that already has evidence, so a whole-packet claim would conflict. Instead, list the packet's modules with `python3 tracker/tasks.py show P0123`, pick an open one, and claim it individually with `python3 tracker/tasks.py claim M000001`. The `--cold` listing already works this way: it lists individual open modules, including members of partial packets.
 
 ## Build a task
 
@@ -36,7 +48,54 @@ Use Linux with elan, Git, GNU tar, sha256sum, a C toolchain and adequate storage
 python3 tracker/tasks.py build P0123 /path/to/new/replay-volume/lean /path/to/new/receipt --bundle
 ```
 
-The task command checks the selected sources and pinned mathlib revision, builds the targets with Lake, and saves the command, exit status, toolchain identity, output hashes and build transcript. Lake will build missing imports locally. A module late in the dependency graph can require substantial work on a cold machine. The optional bundle contains the selected modules' generated build files. Use `--fast-bundle` to package the same files with gzip level 1 when worker time matters more than transfer size. Both variants record the final archive's SHA-256 in the receipt. The public index lists direct project dependencies as task IDs.
+The task command checks the selected sources and pinned mathlib revision, builds the targets with Lake, and saves the command, exit status, toolchain identity, output hashes and build transcript. The receipt also records UTC start and end times, elapsed seconds, the host's CPU count and memory, the peak memory of the largest build process, and `rebuilt_project_modules`: the project imports this run's Lake transcript reports as built, besides the requested targets. Lake will build missing imports locally. A module late in the dependency graph can require substantial work on a cold machine. The optional bundle contains the selected modules' generated build files. Use `--fast-bundle` to package the same files with gzip level 1 when worker time matters more than transfer size. Both variants record the final archive's SHA-256 in the receipt. The public index lists direct project dependencies as task IDs.
+
+## Build on Windows or macOS with Docker
+
+The replay scripts expect Linux. On Windows or macOS, run them in a Docker container. Building the project runs Lean code from the archive, so do not mount host folders into the container. Use a named volume for the build.
+
+```bash
+docker volume create rhwork
+docker run -d --name rhreplay -v rhwork:/work ubuntu:24.04 sleep infinity
+docker exec -it rhreplay bash
+```
+
+Inside the container:
+
+```bash
+apt-get update && apt-get install -y curl git python3 build-essential ca-certificates
+curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+sh /tmp/elan-init.sh -y --default-toolchain none
+ln -s /root/.elan/bin/* /usr/local/bin/
+git clone https://github.com/rohanarun/alpoge-rh-replay /work/repo
+cd /work/repo
+./verify.sh /work/vol --prepare-only
+python3 tracker/tasks.py next --cold
+```
+
+The container has no GitHub login. Claim from the host instead, either on the website or with the GitHub CLI:
+
+```bash
+gh issue create --repo rohanarun/alpoge-rh-replay --title "Claim M000001" --body "I am working on M000001."
+```
+
+After the grant, build inside the container, then copy the receipt to the host for your submission:
+
+```bash
+python3 tracker/tasks.py build M000001 /work/vol/lean /work/receipt-M000001 --bundle
+```
+
+```bash
+docker cp rhreplay:/work/receipt-M000001 .
+```
+
+Notes:
+
+- Docker Desktop limits the container's memory. With the WSL 2 backend on Windows, the limit comes from WSL, which defaults to half of the host RAM. Raise it with `memory=` under `[wsl2]` in `%UserProfile%\.wslconfig`, then run `wsl --shutdown`. On macOS, use Docker Desktop's Resources settings. Run `free -g` in the container to see the limit.
+- The prepare step downloads about 8,700 Mathlib cache files and can be slow. After that, a cold module builds in minutes. One took about 5 minutes on 16 vCPUs.
+- `ubuntu:24.04` has no `/usr/bin/time`. Use the shell's `time` keyword to log elapsed time, or install the `time` package.
+- In Git Bash on Windows, prefix `docker exec` and `docker cp` commands that contain container paths with `MSYS_NO_PATHCONV=1`. Otherwise Git Bash rewrites `/work/...` into a Windows path.
+- Remove everything afterwards with `docker rm -f rhreplay` and `docker volume rm rhwork`.
 
 ## Troubleshoot a Lean version mismatch
 

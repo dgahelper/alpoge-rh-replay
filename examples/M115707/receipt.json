@@ -1,0 +1,37 @@
+{
+  "task": "M115707",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "lean_flags": [
+    "-j1",
+    "-DautoImplicit=false",
+    "-DrelaxedAutoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-Dpp.unicode.fun=true",
+    "-DmaxHeartbeats=4000000",
+    "--tstack=400000"
+  ],
+  "sha256": {
+    "published": "403c7963e5064fe2d3bc0cbcd26d67dbd394c8c66f5e74298842d4f4b955b27b",
+    "revised": "a7c72bc94dea49203d583f842fdfb27590d1d775b9550239faf5a1ed63453077",
+    "reference": "2df4509e290e01ff23bdd86be9d4adc86859573021155031b1ae8bb2536dd9d2",
+    "audit": "21254bdf1536a4c5b11d7e24564c45473673a9259f7efda300c4b3bb43d54d24",
+    "patch": "90d82e5d69268683102c01bc0ae1ddd2ce83d776d57a912d74853d8bc64f5068"
+  },
+  "comparison": {
+    "source_lines": {
+      "published": 3547,
+      "revised": 386
+    },
+    "heartbeat_environment": "ARM64 macOS, same five imports, synchronous elaboration of all 23 public declarations; import loading and private helper declarations excluded.",
+    "published_heartbeats": 26436,
+    "revised_heartbeats": 20086
+  },
+  "audit": {
+    "rfl_checks_compiled": 23,
+    "metadata": "Matched public binder names, visibility and universes for 23 declarations",
+    "axioms": "'UpperTheory.Reformulated.B.SelectionLemmas.main' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  },
+  "audit_platform": "x86_64 Linux; Lean 4.33.1 with the official pinned Mathlib objects. The standalone script compiled the published reference and exact revised source, then ran AuditAll.lean."
+}

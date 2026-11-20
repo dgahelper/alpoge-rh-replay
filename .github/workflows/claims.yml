@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['tracker/completed.tsv', 'tracker/modules.jsonl.gz', 'tracker/grants.py', '.github/workflows/claims.yml']
+    paths: ['tracker/completed.tsv', 'tracker/modules.jsonl.gz', 'tracker/grants.py', 'tracker/claims_graphql.py', 'tracker/claim_comments.py', '.github/workflows/claims.yml']
 permissions:
   contents: read
   issues: write
@@ -18,8 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           persist-credentials: false
       - name: Reconcile all open reservations
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python3 tracker/grants.py
+        run: python3 tracker/grants.py --graphql

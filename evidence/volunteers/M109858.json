@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    "M109858"
+  ],
+  "ended_utc": "2026-11-20T18:59:34.393451+00:00",
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.InertiaRamification.LogRootDiscChar:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "bef5eb091553967b0c62aacfa431c55555e6d34a2987c472e13ffca255763ba0",
+  "objects": {
+    "M109858": "467e0ca7d7235b78e08cabb388882277bfb7186def9acb0f2b7d9e4db850cad5"
+  },
+  "packet": "M109858",
+  "contributor": "jjjhenriksen",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/801#issuecomment-7048086874",
+  "reviewed_utc": "2026-11-20T19:01:03.403593+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. No binary bundle was supplied for independent checksum review."
+}

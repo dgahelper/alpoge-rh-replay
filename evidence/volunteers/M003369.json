@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M003369"
+  ],
+  "ended_utc": "2026-11-20T17:31:37.842472+00:00",
+  "toolchain": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "88a2d237a58c3788640596da27373521b14942653f6e67048220c74e1228ef78",
+  "objects": {
+    "M003369": "0636bd96cbc69abf751e072c0df9a7a9070f712eecb82e645ecbdc25cba0bd0b"
+  },
+  "bundle_sha256": "2113a64ea45d3d2f9253fe9c757691d995d06cb47dd567cdec0b946cf6b3fa61",
+  "packet": "M003369",
+  "contributor": "varo6",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/164#issuecomment-7046219921",
+  "reviewed_utc": "2026-11-20T17:33:02.373670+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

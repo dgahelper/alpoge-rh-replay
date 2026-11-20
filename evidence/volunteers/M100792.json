@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    "M100792"
+  ],
+  "ended_utc": "2026-11-20T18:22:12.984306+00:00",
+  "toolchain": "Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "inputs_manifest_sha256": "d2a5f82a86712b08ff1923e93eabd3dafe9bdd9a7758893384a0e418580aa719",
+  "command": [
+    "lake",
+    "build",
+    "+Development.AbelianVarietyTheory.PublishedTheorems.Divisors\u2082.PartialZetaFunctionalEquation:olean"
+  ],
+  "exit_code": 0,
+  "log_sha256": "891e5430f0e7a2a672686479bcab4b72cbc921b85696050f17cf38809d63025c",
+  "objects": {
+    "M100792": "58c0d0cfd60e141c09ad703af4ce9a1d2bc3d376d9679e3ad0d5bb4bbe876035"
+  },
+  "bundle_sha256": "aa9a9941c8c9a120ac4936d85d7f1826eab0a455927a38064025cdaac178c82f",
+  "packet": "M100792",
+  "contributor": "BenCaunt",
+  "claim": "https://github.com/rohanarun/alpoge-rh-replay/issues/430#issuecomment-7047313537",
+  "reviewed_utc": "2026-11-20T18:36:50.981991+00:00",
+  "review": "Verified the grant, pinned source hashes, receipt pins and exact targets, and matching successful build transcript. Verified the supplied bundle checksum and every target .olean checksum."
+}

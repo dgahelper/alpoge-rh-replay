@@ -1,0 +1,376 @@
+{
+  "generated_at": "2026-11-20T18:49:00Z",
+  "snapshot": "2026-11-20T15:56:00Z",
+  "scope": "project modules reachable from Main",
+  "lean": "4.33.1",
+  "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "totals": {
+    "modules": 175187,
+    "packets": 2858,
+    "with_evidence": 15909,
+    "remaining": 159278,
+    "percent_done": 9.08
+  },
+  "evidence_categories": [
+    {
+      "value": "wave-reused",
+      "label": "Distributed proof object reused",
+      "count": 10973
+    },
+    {
+      "value": "build-observed",
+      "label": "Successful source build observed",
+      "count": 3372
+    },
+    {
+      "value": "volunteer-build-reviewed",
+      "label": "Volunteer build evidence reviewed",
+      "count": 1413
+    },
+    {
+      "value": "pilot-reused",
+      "label": "Pilot proof object reused",
+      "count": 150
+    },
+    {
+      "value": "pilot-witness-checked",
+      "label": "Pilot downstream module kernel-checked",
+      "count": 1
+    }
+  ],
+  "state_counts": {
+    "assigned": 738,
+    "build-observed": 3372,
+    "open": 158540,
+    "pilot-reused": 150,
+    "pilot-witness-checked": 1,
+    "volunteer-build-reviewed": 1413,
+    "wave-reused": 10973
+  },
+  "snapshot_state_counts": {
+    "open": 162288,
+    "assigned": 11114,
+    "build-observed": 1634,
+    "pilot-reused": 150,
+    "pilot-witness-checked": 1
+  },
+  "depth_bands": [
+    {
+      "band": "0",
+      "total": 5927,
+      "done": 1342,
+      "percent": 22.64
+    },
+    {
+      "band": "1",
+      "total": 4979,
+      "done": 1491,
+      "percent": 29.95
+    },
+    {
+      "band": "2",
+      "total": 4138,
+      "done": 1164,
+      "percent": 28.13
+    },
+    {
+      "band": "3",
+      "total": 3582,
+      "done": 1021,
+      "percent": 28.5
+    },
+    {
+      "band": "4",
+      "total": 3355,
+      "done": 758,
+      "percent": 22.59
+    },
+    {
+      "band": "5",
+      "total": 2937,
+      "done": 713,
+      "percent": 24.28
+    },
+    {
+      "band": "6-10",
+      "total": 12021,
+      "done": 2971,
+      "percent": 24.72
+    },
+    {
+      "band": "11-20",
+      "total": 17812,
+      "done": 3582,
+      "percent": 20.11
+    },
+    {
+      "band": "21-40",
+      "total": 33240,
+      "done": 2460,
+      "percent": 7.4
+    },
+    {
+      "band": "41-80",
+      "total": 50347,
+      "done": 407,
+      "percent": 0.81
+    },
+    {
+      "band": "81+",
+      "total": 36849,
+      "done": 0,
+      "percent": 0.0
+    }
+  ],
+  "packets": {
+    "total": 2858,
+    "fully_done": 24,
+    "partially_done": 1343,
+    "untouched": 1491
+  },
+  "volunteers": [
+    {
+      "contributor": "JanSimeonMetzger",
+      "modules": 768,
+      "packets": 12,
+      "receipts": 12
+    },
+    {
+      "contributor": "gabeldev",
+      "modules": 192,
+      "packets": 3,
+      "receipts": 3
+    },
+    {
+      "contributor": "juanfers1",
+      "modules": 192,
+      "packets": 3,
+      "receipts": 3
+    },
+    {
+      "contributor": "krisyotam",
+      "modules": 128,
+      "packets": 2,
+      "receipts": 2
+    },
+    {
+      "contributor": "BenCaunt",
+      "modules": 64,
+      "packets": 1,
+      "receipts": 1
+    },
+    {
+      "contributor": "dgahelper",
+      "modules": 64,
+      "packets": 1,
+      "receipts": 1
+    },
+    {
+      "contributor": "DanieleCorso",
+      "modules": 1,
+      "packets": 0,
+      "receipts": 1
+    },
+    {
+      "contributor": "Genius-Cai-wen-zheng",
+      "modules": 1,
+      "packets": 0,
+      "receipts": 1
+    },
+    {
+      "contributor": "SeriousRising",
+      "modules": 1,
+      "packets": 0,
+      "receipts": 1
+    },
+    {
+      "contributor": "TVSuchty",
+      "modules": 1,
+      "packets": 0,
+      "receipts": 1
+    },
+    {
+      "contributor": "surfyhou",
+      "modules": 1,
+      "packets": 0,
+      "receipts": 1
+    }
+  ],
+  "recent": [
+    {
+      "id": "M175184",
+      "packet": "P0093",
+      "module": "Statements",
+      "evidence": "build-observed",
+      "evidence_label": "Successful source build observed"
+    },
+    {
+      "id": "M175174",
+      "packet": "P0093",
+      "module": "ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175171",
+      "packet": "P0236",
+      "module": "ReciprocityTheory.SemistableReduction.UnipotentB",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175170",
+      "packet": "P0093",
+      "module": "ReciprocityTheory.SemistableReduction.UnipotentA",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175169",
+      "packet": "P0292",
+      "module": "ReciprocityTheory.SemistableReduction.Unipotent",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175168",
+      "packet": "P0292",
+      "module": "ReciprocityTheory.SemistableReduction.TorusMeanD",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175167",
+      "packet": "P0236",
+      "module": "ReciprocityTheory.SemistableReduction.TorusMeanC",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175166",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.SemistableReduction.TorusMeanB",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175165",
+      "packet": "P0093",
+      "module": "ReciprocityTheory.SemistableReduction.TorusMeanA",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175164",
+      "packet": "P0345",
+      "module": "ReciprocityTheory.SemistableReduction.TorusMean",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175163",
+      "packet": "P0236",
+      "module": "ReciprocityTheory.SemistableReduction.TorusLexC",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175162",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.SemistableReduction.TorusLexB",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175161",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.SemistableReduction.TorusLexA",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175160",
+      "packet": "P0292",
+      "module": "ReciprocityTheory.SemistableReduction.TorusLex",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175159",
+      "packet": "P0391",
+      "module": "ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175158",
+      "packet": "P0093",
+      "module": "ReciprocityTheory.SemistableReduction.TorsionNonvanishStatement",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175157",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.SemistableReduction.TorsionNonvanish",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175156",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.SemistableReduction.SphereTorusC",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175155",
+      "packet": "P0236",
+      "module": "ReciprocityTheory.SemistableReduction.SphereTorusB",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175154",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.SemistableReduction.SphereTorusA",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175153",
+      "packet": "P0292",
+      "module": "ReciprocityTheory.SemistableReduction.SphereTorus",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175152",
+      "packet": "P0093",
+      "module": "ReciprocityTheory.SemistableReduction.SphereLogIntegrableStatement",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175151",
+      "packet": "P0236",
+      "module": "ReciprocityTheory.SemistableReduction.SjHolds",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175127",
+      "packet": "P0345",
+      "module": "ReciprocityTheory.SemistableReduction.SemiDegCE",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175126",
+      "packet": "P0292",
+      "module": "ReciprocityTheory.SemistableReduction.SemiDegCD",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    }
+  ]
+}
