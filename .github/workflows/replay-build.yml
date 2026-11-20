@@ -1,0 +1,50 @@
+name: Replay build
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Packet (P0123) or module (M000001) to build"
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/lib/android /opt/microsoft || true
+          sudo docker image prune --all --force || true
+          df -h
+      - uses: actions/checkout@v4
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+          sh /tmp/elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Record environment
+        run: |
+          mkdir -p "$HOME/receipt-meta"
+          { echo "target=${{ inputs.target }}"; date -u +%FT%TZ; uname -a; nproc; free -h; df -h; } | tee "$HOME/receipt-meta/env.txt"
+      - name: Prepare pinned inputs
+        run: ./verify.sh "$HOME/replay-volume" --prepare-only
+      - name: Build target
+        run: |
+          set +e
+          date -u +%FT%TZ > "$HOME/receipt-meta/build-start.txt"
+          python3 tracker/tasks.py build "${{ inputs.target }}" "$HOME/replay-volume/lean" "$HOME/receipt" --bundle
+          echo $? > "$HOME/receipt-meta/build-exit.txt"
+          date -u +%FT%TZ > "$HOME/receipt-meta/build-end.txt"
+          cat "$HOME/receipt-meta/build-exit.txt"
+      - name: Upload evidence artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: replay-${{ inputs.target }}
+          path: |
+            ~/receipt
+            ~/receipt-meta
+            ~/replay-volume/replay.log
+          if-no-files-found: warn
