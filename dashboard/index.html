@@ -69,6 +69,13 @@
   <div class="bar big-bar" role="img" aria-label="Overall progress"><div class="big-fill" id="bigfill" style="width:0%"></div></div>
   <div class="cards" id="cards"></div>
 
+  <div id="history-section">
+    <h2>Modules with recorded evidence over time</h2>
+    <p class="sub">From the git history of <code>tracker/completed.tsv</code> — each point is the
+    number of ledger rows at that commit.</p>
+    <div id="history-chart"></div>
+  </div>
+
   <h2>Evidence by category</h2>
   <div class="bar" id="catbar" role="img" aria-label="Evidence category breakdown"></div>
   <div class="legend" id="catlegend"></div>
@@ -103,6 +110,42 @@ function esc(s) {
   });
 }
 function el(id) { return document.getElementById(id); }
+function historySvg(hist) {
+  var W = 920, H = 240, padL = 4, padR = 76, padT = 16, padB = 26;
+  var iw = W - padL - padR, ih = H - padT - padB;
+  var times = hist.map(function (p) { return Date.parse(p.t); });
+  var t0 = Math.min.apply(null, times), t1 = Math.max.apply(null, times);
+  var vmax = Math.max.apply(null, hist.map(function (p) { return p.with_evidence; }));
+  function X(t, i) {
+    var frac = t1 > t0 ? (t - t0) / (t1 - t0)
+      : (hist.length > 1 ? i / (hist.length - 1) : 0.5);
+    return padL + frac * iw;
+  }
+  function Y(v) { return padT + ih - (vmax > 0 ? v / vmax : 0) * ih; }
+  var pts = hist.map(function (p, i) {
+    return X(times[i], i).toFixed(1) + "," + Y(p.with_evidence).toFixed(1);
+  });
+  var last = hist[hist.length - 1];
+  var lastX = X(times[times.length - 1], hist.length - 1), lastY = Y(last.with_evidence);
+  var sameDay = hist[0].t.slice(0, 10) === last.t.slice(0, 10);
+  function tlbl(t) { return sameDay ? t.slice(0, 10) + " " + t.slice(11, 16) + " UTC" : t.slice(0, 10); }
+  var s = '<svg viewBox="0 0 ' + W + " " + H + '" width="100%" role="img" ' +
+    'aria-label="Line chart of modules with recorded evidence over time" style="display:block">';
+  if (hist.length > 1) {
+    s += '<polygon fill="var(--accent)" opacity="0.15" points="' + pts.join(" ") + " " +
+      lastX.toFixed(1) + "," + (padT + ih) + " " + padL + "," + (padT + ih) + '"/>';
+    s += '<polyline fill="none" stroke="var(--accent)" stroke-width="2" points="' + pts.join(" ") + '"/>';
+  }
+  s += '<circle cx="' + lastX.toFixed(1) + '" cy="' + lastY.toFixed(1) + '" r="3.5" fill="var(--accent)"/>';
+  s += '<text x="' + (lastX + 8).toFixed(1) + '" y="' + (lastY + 4).toFixed(1) +
+    '" fill="var(--muted)" font-size="13" font-weight="700">' + esc(fmt(last.with_evidence)) + "</text>";
+  s += '<text x="' + padL + '" y="' + (padT + ih - 6) + '" fill="var(--muted)" font-size="12">0</text>';
+  s += '<text x="' + padL + '" y="' + (H - 6) + '" fill="var(--muted)" font-size="12">' +
+    esc(tlbl(hist[0].t)) + "</text>";
+  s += '<text x="' + (W - 2) + '" y="' + (H - 6) + '" fill="var(--muted)" font-size="12" text-anchor="end">' +
+    esc(tlbl(last.t)) + "</text>";
+  return s + "</svg>";
+}
 function card(n, l) {
   return '<div class="card"><div class="n">' + esc(n) + '</div><div class="l">' + esc(l) + "</div></div>";
 }
@@ -118,6 +161,13 @@ fetch("data.json")
       card(fmt(t.remaining), "modules remaining") +
       card(fmt(t.packets), "work packets") +
       card(fmt(d.packets.fully_done), "packets fully done");
+
+    var hist = d.history || [];
+    if (hist.length === 0) {
+      el("history-section").style.display = "none";
+    } else {
+      el("history-chart").innerHTML = historySvg(hist);
+    }
 
     var barHtml = "", legendHtml = "", rowsHtml = "";
     d.evidence_categories.forEach(function (c, i) {

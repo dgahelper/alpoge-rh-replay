@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T18:49:00Z",
+  "generated_at": "2026-11-20T19:28:07Z",
   "snapshot": "2026-11-20T15:56:00Z",
   "scope": "project modules reachable from Main",
   "lean": "4.33.1",
@@ -7,25 +7,25 @@
   "totals": {
     "modules": 175187,
     "packets": 2858,
-    "with_evidence": 15909,
-    "remaining": 159278,
-    "percent_done": 9.08
+    "with_evidence": 29822,
+    "remaining": 145365,
+    "percent_done": 17.02
   },
   "evidence_categories": [
     {
       "value": "wave-reused",
       "label": "Distributed proof object reused",
-      "count": 10973
+      "count": 16987
     },
     {
       "value": "build-observed",
       "label": "Successful source build observed",
-      "count": 3372
+      "count": 7196
     },
     {
       "value": "volunteer-build-reviewed",
       "label": "Volunteer build evidence reviewed",
-      "count": 1413
+      "count": 5488
     },
     {
       "value": "pilot-reused",
@@ -39,13 +39,13 @@
     }
   ],
   "state_counts": {
-    "assigned": 738,
-    "build-observed": 3372,
-    "open": 158540,
+    "assigned": 736,
+    "build-observed": 7196,
+    "open": 144629,
     "pilot-reused": 150,
     "pilot-witness-checked": 1,
-    "volunteer-build-reviewed": 1413,
-    "wave-reused": 10973
+    "volunteer-build-reviewed": 5488,
+    "wave-reused": 16987
   },
   "snapshot_state_counts": {
     "open": 162288,
@@ -58,93 +58,123 @@
     {
       "band": "0",
       "total": 5927,
-      "done": 1342,
-      "percent": 22.64
+      "done": 2208,
+      "percent": 37.25
     },
     {
       "band": "1",
       "total": 4979,
-      "done": 1491,
-      "percent": 29.95
+      "done": 1995,
+      "percent": 40.07
     },
     {
       "band": "2",
       "total": 4138,
-      "done": 1164,
-      "percent": 28.13
+      "done": 1745,
+      "percent": 42.17
     },
     {
       "band": "3",
       "total": 3582,
-      "done": 1021,
-      "percent": 28.5
+      "done": 1677,
+      "percent": 46.82
     },
     {
       "band": "4",
       "total": 3355,
-      "done": 758,
-      "percent": 22.59
+      "done": 1359,
+      "percent": 40.51
     },
     {
       "band": "5",
       "total": 2937,
-      "done": 713,
-      "percent": 24.28
+      "done": 1113,
+      "percent": 37.9
     },
     {
       "band": "6-10",
       "total": 12021,
-      "done": 2971,
-      "percent": 24.72
+      "done": 4809,
+      "percent": 40.0
     },
     {
       "band": "11-20",
       "total": 17812,
-      "done": 3582,
-      "percent": 20.11
+      "done": 6590,
+      "percent": 37.0
     },
     {
       "band": "21-40",
       "total": 33240,
-      "done": 2460,
-      "percent": 7.4
+      "done": 6637,
+      "percent": 19.97
     },
     {
       "band": "41-80",
       "total": 50347,
-      "done": 407,
-      "percent": 0.81
+      "done": 1688,
+      "percent": 3.35
     },
     {
       "band": "81+",
       "total": 36849,
-      "done": 0,
+      "done": 1,
       "percent": 0.0
     }
   ],
   "packets": {
     "total": 2858,
-    "fully_done": 24,
-    "partially_done": 1343,
-    "untouched": 1491
+    "fully_done": 81,
+    "partially_done": 1496,
+    "untouched": 1281
   },
   "volunteers": [
     {
+      "contributor": "shardmods",
+      "modules": 2560,
+      "packets": 40,
+      "receipts": 40
+    },
+    {
       "contributor": "JanSimeonMetzger",
-      "modules": 768,
-      "packets": 12,
-      "receipts": 12
+      "modules": 1280,
+      "packets": 20,
+      "receipts": 20
     },
     {
       "contributor": "gabeldev",
-      "modules": 192,
-      "packets": 3,
-      "receipts": 3
+      "modules": 313,
+      "packets": 4,
+      "receipts": 61
     },
     {
       "contributor": "juanfers1",
-      "modules": 192,
+      "modules": 256,
+      "packets": 4,
+      "receipts": 4
+    },
+    {
+      "contributor": "BenCaunt",
+      "modules": 194,
+      "packets": 1,
+      "receipts": 131
+    },
+    {
+      "contributor": "SeriousRising",
+      "modules": 193,
       "packets": 3,
+      "receipts": 4
+    },
+    {
+      "contributor": "Amahane-Hikari",
+      "modules": 185,
+      "packets": 0,
+      "receipts": 185
+    },
+    {
+      "contributor": "dgahelper",
+      "modules": 129,
+      "packets": 2,
       "receipts": 3
     },
     {
@@ -154,37 +184,109 @@
       "receipts": 2
     },
     {
-      "contributor": "BenCaunt",
-      "modules": 64,
-      "packets": 1,
-      "receipts": 1
-    },
-    {
-      "contributor": "dgahelper",
-      "modules": 64,
-      "packets": 1,
-      "receipts": 1
-    },
-    {
       "contributor": "DanieleCorso",
-      "modules": 1,
-      "packets": 0,
-      "receipts": 1
+      "modules": 75,
+      "packets": 1,
+      "receipts": 12
     },
     {
       "contributor": "Genius-Cai-wen-zheng",
-      "modules": 1,
-      "packets": 0,
-      "receipts": 1
+      "modules": 65,
+      "packets": 1,
+      "receipts": 2
     },
     {
-      "contributor": "SeriousRising",
-      "modules": 1,
+      "contributor": "maddoxjack",
+      "modules": 29,
       "packets": 0,
-      "receipts": 1
+      "receipts": 29
+    },
+    {
+      "contributor": "user42245",
+      "modules": 17,
+      "packets": 0,
+      "receipts": 17
+    },
+    {
+      "contributor": "jjjhenriksen",
+      "modules": 10,
+      "packets": 0,
+      "receipts": 10
+    },
+    {
+      "contributor": "vivekshivarajkumar",
+      "modules": 10,
+      "packets": 0,
+      "receipts": 10
+    },
+    {
+      "contributor": "unhingedpanda",
+      "modules": 8,
+      "packets": 0,
+      "receipts": 8
+    },
+    {
+      "contributor": "Wronskode",
+      "modules": 7,
+      "packets": 0,
+      "receipts": 7
+    },
+    {
+      "contributor": "hipotures",
+      "modules": 7,
+      "packets": 0,
+      "receipts": 7
+    },
+    {
+      "contributor": "arxhr007",
+      "modules": 4,
+      "packets": 0,
+      "receipts": 4
+    },
+    {
+      "contributor": "mu-mei",
+      "modules": 3,
+      "packets": 0,
+      "receipts": 3
+    },
+    {
+      "contributor": "roonastgames",
+      "modules": 3,
+      "packets": 0,
+      "receipts": 3
+    },
+    {
+      "contributor": "varo6",
+      "modules": 3,
+      "packets": 0,
+      "receipts": 3
+    },
+    {
+      "contributor": "Paulee314",
+      "modules": 2,
+      "packets": 0,
+      "receipts": 2
     },
     {
       "contributor": "TVSuchty",
+      "modules": 2,
+      "packets": 0,
+      "receipts": 2
+    },
+    {
+      "contributor": "emsi",
+      "modules": 2,
+      "packets": 0,
+      "receipts": 2
+    },
+    {
+      "contributor": "dhudakk",
+      "modules": 1,
+      "packets": 0,
+      "receipts": 1
+    },
+    {
+      "contributor": "gniax",
       "modules": 1,
       "packets": 0,
       "receipts": 1
@@ -205,9 +307,30 @@
       "evidence_label": "Successful source build observed"
     },
     {
+      "id": "M175176",
+      "packet": "P0236",
+      "module": "ReciprocityTheory.ThetaQuasiPeriods.Transl",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175175",
+      "packet": "P0171",
+      "module": "ReciprocityTheory.ThetaQuasiPeriods.ThetaQuasiPeriodStatement",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
       "id": "M175174",
       "packet": "P0093",
       "module": "ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice",
+      "evidence": "wave-reused",
+      "evidence_label": "Distributed proof object reused"
+    },
+    {
+      "id": "M175172",
+      "packet": "P0292",
+      "module": "ReciprocityTheory.ThetaQuasiPeriods.Change",
       "evidence": "wave-reused",
       "evidence_label": "Distributed proof object reused"
     },
@@ -350,27 +473,116 @@
       "module": "ReciprocityTheory.SemistableReduction.SphereLogIntegrableStatement",
       "evidence": "wave-reused",
       "evidence_label": "Distributed proof object reused"
+    }
+  ],
+  "history": [
+    {
+      "t": "2026-11-20T11:09:03-05:00",
+      "with_evidence": 2255
     },
     {
-      "id": "M175151",
-      "packet": "P0236",
-      "module": "ReciprocityTheory.SemistableReduction.SjHolds",
-      "evidence": "wave-reused",
-      "evidence_label": "Distributed proof object reused"
+      "t": "2026-11-20T11:25:13-05:00",
+      "with_evidence": 2957
     },
     {
-      "id": "M175127",
-      "packet": "P0345",
-      "module": "ReciprocityTheory.SemistableReduction.SemiDegCE",
-      "evidence": "wave-reused",
-      "evidence_label": "Distributed proof object reused"
+      "t": "2026-11-20T11:27:59-05:00",
+      "with_evidence": 3066
     },
     {
-      "id": "M175126",
-      "packet": "P0292",
-      "module": "ReciprocityTheory.SemistableReduction.SemiDegCD",
-      "evidence": "wave-reused",
-      "evidence_label": "Distributed proof object reused"
+      "t": "2026-11-20T11:48:08-05:00",
+      "with_evidence": 3943
+    },
+    {
+      "t": "2026-11-20T11:52:42-05:00",
+      "with_evidence": 4076
+    },
+    {
+      "t": "2026-11-20T11:53:44-05:00",
+      "with_evidence": 4140
+    },
+    {
+      "t": "2026-11-20T12:02:11-05:00",
+      "with_evidence": 14004
+    },
+    {
+      "t": "2026-11-20T12:10:15-05:00",
+      "with_evidence": 14272
+    },
+    {
+      "t": "2026-11-20T12:22:22-05:00",
+      "with_evidence": 15409
+    },
+    {
+      "t": "2026-11-20T12:28:50-05:00",
+      "with_evidence": 15909
+    },
+    {
+      "t": "2026-11-20T12:29:52-05:00",
+      "with_evidence": 16051
+    },
+    {
+      "t": "2026-11-20T12:34:06-05:00",
+      "with_evidence": 17167
+    },
+    {
+      "t": "2026-11-20T12:37:14-05:00",
+      "with_evidence": 17651
+    },
+    {
+      "t": "2026-11-20T12:57:59-05:00",
+      "with_evidence": 22535
+    },
+    {
+      "t": "2026-11-20T12:59:55-05:00",
+      "with_evidence": 22686
+    },
+    {
+      "t": "2026-11-20T13:21:05-05:00",
+      "with_evidence": 23801
+    },
+    {
+      "t": "2026-11-20T13:39:02-05:00",
+      "with_evidence": 26806
+    },
+    {
+      "t": "2026-11-20T13:45:45-05:00",
+      "with_evidence": 27474
+    },
+    {
+      "t": "2026-11-20T13:47:44-05:00",
+      "with_evidence": 27718
+    },
+    {
+      "t": "2026-11-20T13:49:46-05:00",
+      "with_evidence": 27836
+    },
+    {
+      "t": "2026-11-20T13:52:21-05:00",
+      "with_evidence": 28040
+    },
+    {
+      "t": "2026-11-20T13:55:27-05:00",
+      "with_evidence": 28270
+    },
+    {
+      "t": "2026-11-20T13:59:19-05:00",
+      "with_evidence": 28576
+    },
+    {
+      "t": "2026-11-20T14:02:22-05:00",
+      "with_evidence": 28837
+    },
+    {
+      "t": "2026-11-20T14:04:16-05:00",
+      "with_evidence": 28916
+    },
+    {
+      "t": "2026-11-20T14:22:48-05:00",
+      "with_evidence": 29613
+    },
+    {
+      "t": "2026-11-20T14:26:48-05:00",
+      "with_evidence": 29822
     }
   ]
 }

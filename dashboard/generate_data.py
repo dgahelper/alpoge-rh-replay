@@ -10,11 +10,18 @@ tracker/modules.jsonl.gz and evidence/volunteers/*.json from the repository
 root, applies the completed.tsv overlay to module states exactly as
 tracker/tasks.py load() does, and writes aggregated data (never raw module
 rows) to dashboard/data.json next to this script.
+
+The "history" series is built from this repository's own git history:
+tracker/completed.tsv carries no timestamps, so for each commit that
+touched the file we record the commit time and the file's data-row count
+at that commit. When git history is unavailable (not a checkout, shallow
+clone, git missing) the series is simply empty and generation continues.
 """
 import csv
 import datetime
 import gzip
 import json
+import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -44,6 +51,45 @@ def band_for(depth):
         if depth >= lo and (hi is None or depth <= hi):
             return label
     raise ValueError(depth)
+
+
+def history_series():
+    """Ledger size over time, from the git history of tracker/completed.tsv.
+
+    One point per commit that touched the file: the committer date and the
+    file's data-row count at that commit, downsampled to at most ~240
+    points (first and last always kept). Counts are reported raw, exactly
+    as the file stood at each commit. Returns [] if git history is
+    unavailable for any reason -- this series is optional and must never
+    fail the whole generation.
+    """
+    try:
+        def git(*args):
+            return subprocess.run(
+                ["git", "-C", str(ROOT), *args],
+                capture_output=True, text=True, timeout=120, check=True,
+            ).stdout
+
+        if git("rev-parse", "--is-shallow-repository").strip() == "true":
+            return []
+        log = git("log", "--reverse", "--format=%H%x09%cI", "--",
+                  "tracker/completed.tsv")
+        commits = [line.split("\t") for line in log.splitlines()
+                   if line.strip()]
+        if not commits:
+            return []
+        if len(commits) > 240:
+            keep = sorted({round(i * (len(commits) - 1) / 239)
+                           for i in range(240)})
+            commits = [commits[i] for i in keep]
+        points = []
+        for sha, when in commits:
+            blob = git("show", f"{sha}:tracker/completed.tsv")
+            rows = max(0, len(blob.splitlines()) - 1)  # minus the header
+            points.append({"t": when, "with_evidence": rows})
+        return points
+    except Exception:
+        return []
 
 
 def main():
@@ -165,6 +211,7 @@ def main():
         "packets": packet_stats,
         "volunteers": leaderboard,
         "recent": recent,
+        "history": history_series(),
     }
     OUT.write_text(json.dumps(data, indent=2) + "\n")
     print(f"Wrote {OUT}: {with_evidence}/{total} modules with evidence "
