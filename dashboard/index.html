@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpöge RH Replay — Progress Dashboard (unofficial)</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1d21; --muted: #5b6470; --card: #f4f6f8;
+    --border: #d9dee4; --accent: #2563eb; --accent2: #16a34a;
+    --c1: #2563eb; --c2: #16a34a; --c3: #d97706; --c4: #7c3aed; --c5: #db2777;
+    --bar-bg: #e5e9ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121519; --fg: #e8ebee; --muted: #9aa5b1; --card: #1b2027;
+      --border: #2e3540; --accent: #6aa5ff; --accent2: #4ade80;
+      --bar-bg: #2a313b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 8px; }
+  a { color: var(--accent); }
+  .bar { background: var(--bar-bg); border-radius: 6px; height: 18px; overflow: hidden; display: flex; }
+  .bar > div { height: 100%; }
+  .big-bar { height: 28px; }
+  .big-fill { background: var(--accent2); }
+  .headline-num { font-size: 2rem; font-weight: 700; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .card .n { font-size: 1.35rem; font-weight: 700; }
+  .card .l { color: var(--muted); font-size: 0.85rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .rowbar { display: flex; align-items: center; gap: 10px; margin: 6px 0; }
+  .rowbar .lab { width: 52px; flex: none; font-variant-numeric: tabular-nums; }
+  .rowbar .bar { flex: 1; height: 14px; }
+  .rowbar .val { width: 170px; flex: none; color: var(--muted); font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.88rem; color: var(--muted); margin-top: 8px; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; }
+  ul.recent { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+  ul.recent li { padding: 5px 0; border-bottom: 1px solid var(--border); word-break: break-all; }
+  .tag { color: var(--muted); font-size: 0.8rem; border: 1px solid var(--border); border-radius: 10px; padding: 0 7px; margin-left: 6px; white-space: nowrap; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 12px; }
+  code { font-size: 0.85em; word-break: break-all; }
+  #error { color: #dc2626; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Alpöge RH Replay — Progress Dashboard</h1>
+  <p class="sub">Unofficial community dashboard for the independent replay of
+  Alpöge&rsquo;s claimed Lean proof of the Riemann Hypothesis. All figures are
+  generated from files already in
+  <a href="https://github.com/rohanarun/alpoge-rh-replay">the replay repository</a> —
+  see <a href="https://github.com/rohanarun/alpoge-rh-replay/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>
+  to claim a packet and help.</p>
+  <p id="error"></p>
+
+  <div class="headline-num" id="headline">Loading…</div>
+  <div class="bar big-bar" role="img" aria-label="Overall progress"><div class="big-fill" id="bigfill" style="width:0%"></div></div>
+  <div class="cards" id="cards"></div>
+
+  <h2>Evidence by category</h2>
+  <div class="bar" id="catbar" role="img" aria-label="Evidence category breakdown"></div>
+  <div class="legend" id="catlegend"></div>
+  <table id="cattable"><thead><tr><th>Category</th><th class="num">Modules</th><th class="num">Share of recorded evidence</th></tr></thead><tbody></tbody></table>
+
+  <h2>Progress by import depth</h2>
+  <p class="sub">Modules with recorded evidence vs. total modules, grouped by project-import depth.</p>
+  <div id="depths"></div>
+
+  <h2>Packets</h2>
+  <div class="cards" id="packets"></div>
+
+  <h2>Volunteer leaderboard</h2>
+  <p class="sub">Reviewed volunteer build receipts in <code>evidence/volunteers/</code>.</p>
+  <table id="volunteers"><thead><tr><th>Contributor</th><th class="num">Modules reviewed</th><th class="num">Packets</th><th class="num">Receipts</th></tr></thead><tbody></tbody></table>
+
+  <h2>Latest ledger entries (highest module IDs)</h2>
+  <p class="sub">The ledger (<code>tracker/completed.tsv</code>) is sorted by module ID and
+  carries no timestamps, so these are the last 25 ledger rows — the highest module IDs —
+  not the most recent completions in time.</p>
+  <ul class="recent" id="recent"></ul>
+
+  <footer id="footer"></footer>
+</main>
+<script>
+"use strict";
+var COLORS = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)", "var(--c5)", "#0891b2", "#65a30d"];
+function fmt(n) { return n.toLocaleString("en-US"); }
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function (ch) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+  });
+}
+function el(id) { return document.getElementById(id); }
+function card(n, l) {
+  return '<div class="card"><div class="n">' + esc(n) + '</div><div class="l">' + esc(l) + "</div></div>";
+}
+fetch("data.json")
+  .then(function (r) { if (!r.ok) { throw new Error("data.json: HTTP " + r.status); } return r.json(); })
+  .then(function (d) {
+    var t = d.totals;
+    el("headline").textContent = t.percent_done.toFixed(2) + "% of modules with recorded evidence — " +
+      fmt(t.with_evidence) + " of " + fmt(t.modules) + " modules";
+    el("bigfill").style.width = t.percent_done + "%";
+    el("cards").innerHTML =
+      card(fmt(t.with_evidence), "modules with recorded evidence") +
+      card(fmt(t.remaining), "modules remaining") +
+      card(fmt(t.packets), "work packets") +
+      card(fmt(d.packets.fully_done), "packets fully done");
+
+    var barHtml = "", legendHtml = "", rowsHtml = "";
+    d.evidence_categories.forEach(function (c, i) {
+      var share = 100 * c.count / t.with_evidence;
+      var color = COLORS[i % COLORS.length];
+      barHtml += '<div style="width:' + share + "%;background:" + color + '" title="' +
+        esc(c.label) + ": " + fmt(c.count) + '"></div>';
+      legendHtml += '<span><span class="swatch" style="background:' + color + '"></span>' + esc(c.label) + "</span>";
+      rowsHtml += "<tr><td>" + esc(c.label) + '</td><td class="num">' + fmt(c.count) +
+        '</td><td class="num">' + share.toFixed(1) + "%</td></tr>";
+    });
+    el("catbar").innerHTML = barHtml;
+    el("catlegend").innerHTML = legendHtml;
+    el("cattable").querySelector("tbody").innerHTML = rowsHtml;
+
+    el("depths").innerHTML = d.depth_bands.map(function (b) {
+      return '<div class="rowbar"><div class="lab">' + esc(b.band) + '</div>' +
+        '<div class="bar"><div style="width:' + b.percent + '%;background:var(--accent)"></div></div>' +
+        '<div class="val">' + fmt(b.done) + " / " + fmt(b.total) + " (" + b.percent.toFixed(1) + "%)</div></div>";
+    }).join("");
+
+    var p = d.packets;
+    el("packets").innerHTML =
+      card(fmt(p.fully_done), "fully done") +
+      card(fmt(p.partially_done), "partially done") +
+      card(fmt(p.untouched), "untouched") +
+      card(fmt(p.total), "total packets");
+
+    el("volunteers").querySelector("tbody").innerHTML = d.volunteers.map(function (v) {
+      return '<tr><td><a href="https://github.com/' + esc(v.contributor) + '">' + esc(v.contributor) +
+        '</a></td><td class="num">' + fmt(v.modules) + '</td><td class="num">' + fmt(v.packets) +
+        '</td><td class="num">' + fmt(v.receipts) + "</td></tr>";
+    }).join("");
+
+    el("recent").innerHTML = d.recent.map(function (r) {
+      return "<li><code>" + esc(r.id) + "</code> · " + esc(r.module) +
+        '<span class="tag">' + esc(r.evidence_label) + "</span></li>";
+    }).join("");
+
+    el("footer").innerHTML =
+      "Coordinator snapshot: " + esc(d.snapshot) + " · Dashboard data generated: " + esc(d.generated_at) +
+      "<br>Lean " + esc(d.lean) + " · Mathlib commit <code>" + esc(d.mathlib_commit) + "</code>" +
+      "<br>Scope: " + esc(d.scope) + ". Module states include the tracker/completed.tsv overlay, " +
+      "matching tracker/tasks.py. This page is unofficial; the repository README and ledger are authoritative.";
+  })
+  .catch(function (e) { el("error").textContent = "Could not load data.json — " + e.message; });
+</script>
+</body>
+</html>

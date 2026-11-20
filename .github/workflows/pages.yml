@@ -1,0 +1,34 @@
+name: Deploy progress dashboard
+
+on:
+  # Manual only for now: the Pages site is not enabled yet (the endpoint
+  # still returns 404), so automatic runs on ledger pushes and on the
+  # hourly schedule would only generate failed deployments. Restore the
+  # push and schedule triggers once Pages is enabled in the repository
+  # settings (Settings -> Pages -> Source: GitHub Actions).
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate dashboard data from tracker files
+        run: python3 dashboard/generate_data.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+      - id: deployment
+        uses: actions/deploy-pages@v4
